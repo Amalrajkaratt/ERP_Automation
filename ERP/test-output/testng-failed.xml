@@ -7,10 +7,8 @@
         <methods>
           <include name="urlloading"/>
           <include name="browserclose"/>
-          <include name="edit_quotation"/>
-          <include name="followup_from_enquiry_overiew"/>
+          <include name="view_quotation"/>
           <include name="teardown"/>
-          <include name="quotation"/>
         </methods>
       </class> <!-- test.ERP_Test -->
     </classes>

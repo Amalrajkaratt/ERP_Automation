@@ -15,6 +15,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.aventstack.extentreports.ExtentTest;
@@ -34,19 +35,23 @@ public class Quotation {
 	By quotation_valid_upto=By.id("expdate");
 	By quo_no=By.id("quotation-no");
 	By billing_address_dropdown=By.id("billingaddress");
-	By description=By.xpath("(//textarea[@rows='3' and contains(@class,'textarea')]");
+	By description = By.xpath("//textarea[@rows='3' and contains(@class,'textarea')]");
 	By item_description=By.xpath("(//textarea[contains(@class,'textarea')])[1]");
 	By rate=By.xpath("(//input[contains(@class,'form-control') and contains(@class,'number') and @type='text'])[1]");
 	By subsidy=By.xpath("/html/body/div[1]/div[1]/div[1]/form/div/div[2]/div/div/div[1]/div/div[16]/div/table/tbody/tr/td[4]/input");
-	By quotation_save_btn=By.xpath("/html/body/div[1]/div[1]/div[1]/form/div/div[2]/div/div/div[2]/button[1]");
+	By quotation_save_btn=By.xpath("//button[.//i[contains(@class,'ri-save-line')]]");
 	By quotation_confirm_btn=By.xpath("/html/body/div[21]/div/div[3]/button[1]");
 	
-	By quotation_table=By.xpath("/html/body/div[1]/div[1]/div[1]/div[2]/div/div/div/div[2]/div[2]/table");
 	By edit_quotation=By.xpath("/html/body/div[1]/div[1]/div[1]/div/div[1]/div[2]/button[2]");
-	By confirm_edit_btn=By.xpath("//button[@aria-label='Thumbs up, great!']");
-	
-	
-	
+    
+	By viewBtn = By.xpath("//a[.//i[contains(@class,'ri-eye-line')]]");
+
+	By followupBtn = By.xpath("//button[contains(., 'Followup') and .//i[contains(@class,'ri-printer-line')]]");
+	By followupStatus = By.cssSelector("select.form-control.d-flex");
+	By qtn_description = By.id("short-description");
+	By saveBtn = By.xpath("//button[@type='submit' and contains(normalize-space(.), 'Save')]");
+
+		
 	public Quotation(WebDriver driver, ExtentTest test2) {
 		this.driver=driver;
 		this.test2=test2;
@@ -86,7 +91,7 @@ public class Quotation {
 
         System.out.println("Copied text: " + qt_no);
 
-		{
+		
 		if (qt_no.length()>0)
 		{
 			test2.log(Status.PASS, "Quotation no : "+qt_no);
@@ -95,12 +100,13 @@ public class Quotation {
 		{
 			test2.log(Status.FAIL, "The quotation number is not present");
 		}
-		}
+		
 	
 		
 		Thread.sleep(2000);
 		WebElement Description = driver.findElement(description);
-		
+	   ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", Description);
+
 		Actions act_desc=new Actions(driver);
 		act_desc.click(Description).perform();
 		act_desc.keyDown(Keys.CONTROL).sendKeys("a").keyUp(Keys.CONTROL).perform();
@@ -140,27 +146,27 @@ public class Quotation {
 //			test2.log(Status.INFO, "The item description field is empty and value passed");
 //		}
 
-		
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", driver.findElement(rate));
+
 		driver.findElement(rate).clear();
 		driver.findElement(rate).sendKeys("210000");
 		
 		List<WebElement> Subsidy=driver.findElements(subsidy);
 		
-		if(Subsidy.size()>0)
-		{
-			WebElement subsidy_field=Subsidy.get(0);
-			subsidy_field.sendKeys("78000");
-			test2.log(Status.PASS, "Subsidy field found and value passed");
-		}
-		else {
-			test2.log(Status.INFO, "The subsidy field is not present");
-		}
+//		if(Subsidy.size()>0)
+//		{
+//			WebElement subsidy_field=Subsidy.get(0);
+//			subsidy_field.sendKeys("78000");
+//			test2.log(Status.PASS, "Subsidy field found and value passed");
+//		}
+//		else {
+//			test2.log(Status.INFO, "The subsidy field is not present");
+//		}
 		
 		js.executeScript("arguments[0].scrollIntoView();", driver.findElement(quotation_save_btn));
 		Actions act1=new Actions(driver);
 		act1.moveToElement(driver.findElement(quotation_save_btn)).click().perform();
 		
-		wait.until(ExpectedConditions.visibilityOfElementLocated(quotation_confirm_btn)).click();
 		
 		test2.log(Status.PASS, "Quotation created successfully");
 		
@@ -169,48 +175,81 @@ public class Quotation {
 	
 	public void edit_quotation() throws Exception {
 		
-		WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(20));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(quotation_table));
-		System.out.println("\n"+qt_no);
-		WebElement Q_Table=driver.findElement(quotation_table);
 		
-		List<WebElement> rows=Q_Table.findElements(By.tagName("tr"));
-		
-		boolean quotationFound = false;
-        String ValueToFind=qt_no;
-        
-        System.out.println("Quotation number found : "+ValueToFind);
-        test2.log(Status.PASS, "Quotation number found : "+qt_no);
-
-	    for (int i = 0; i < rows.size(); i++) {
-	        // Re-locate the table and rows each time to avoid stale element
-	        WebElement row = Q_Table.findElements(By.tagName("tr")).get(i);
-	        List<WebElement> cells = row.findElements(By.tagName("td"));
-	        for (WebElement cell : cells) {
-	            if (cell.getText().equals(ValueToFind)) {
-	                test2.log(Status.PASS, "Quotation found");
-	                row.click();
+        WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(10));
 	                
-	                wait.until(ExpectedConditions.visibilityOfElementLocated(edit_quotation)).click();
-	                JavascriptExecutor js=(JavascriptExecutor)driver;
-	        		js.executeScript("arguments[0].scrollIntoView();", driver.findElement(quotation_save_btn));
-	        		Actions act=new Actions(driver);
-	        		act.moveToElement(driver.findElement(quotation_save_btn)).click().perform();
-	        		
-	        		wait.until(ExpectedConditions.visibilityOfElementLocated(confirm_edit_btn)).click();
-
-	                quotationFound = true;
-	                break; 
-	            }
-	        }
-	        if (quotationFound) {
-	            break; // Exit the outer loop if enquiry is found
-	        }
-	    }
-
-	    if (!quotationFound) {
-	    	test2.log(Status.FATAL, "Quotation not found: " + ValueToFind);
-	    }
+        wait.until(ExpectedConditions.visibilityOfElementLocated(edit_quotation)).click();
+        
+        Thread.sleep(2000);
+        JavascriptExecutor js=(JavascriptExecutor)driver;
+        js.executeScript("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", driver.findElement(quotation_save_btn));
+		Actions act=new Actions(driver);
+		act.moveToElement(driver.findElement(quotation_save_btn)).click().perform();
 		
+
+		test2.log(Status.PASS, "Quotation edited successfully");
+	}
+	
+	public void view_quotation()throws Exception {
+		
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(viewBtn));
+		// Store the current tab
+		String mainTab = driver.getWindowHandle();
+
+		// Click the view button
+		driver.findElement(viewBtn).click();
+
+		// Wait for new tab to appear
+		wait.until(driver -> driver.getWindowHandles().size() > 1);
+
+		// Switch to new tab
+		for (String tab : driver.getWindowHandles()) {
+		    if (!tab.equals(mainTab)) {
+		        driver.switchTo().window(tab);
+		        break;
+		    }
+		}
+
+		// Print success
+		System.out.println("New tab opened successfully");
+
+		// Hold for 3 seconds
+		Thread.sleep(3000);
+
+		// Close the new tab
+		driver.close();
+
+		// Switch back to main tab
+		driver.switchTo().window(mainTab);
+		System.out.println("Returned to main tab");
+
+	}
+	
+	public void quotation_followup() throws Exception {
+
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+		wait.until(ExpectedConditions.visibilityOfElementLocated(followupBtn)).click();
+
+		Thread.sleep(2000);
+
+		WebElement dropdown = driver.findElement(followupStatus);
+		Select select = new Select(dropdown);
+
+		for (WebElement option : select.getOptions()) {
+		    if (option.getText().contains("Won")) {
+		        option.click();
+		        break;
+		    }
+		}
+
+		WebElement description_field = driver.findElement(qtn_description);
+		description_field.sendKeys("Followup done");
+
+		Thread.sleep(2000);
+		driver.findElement(saveBtn).click();
+
+		test2.log(Status.PASS, "Quotation followup saved successfully");
 	}
 }

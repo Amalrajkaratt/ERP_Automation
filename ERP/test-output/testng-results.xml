@@ -1,282 +1,137 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="6" passed="3" failed="3" skipped="0">
+<testng-results ignored="0" total="8" passed="8" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-12-12T10:21:51 IST" name="Default suite" finished-at="2025-12-12T10:23:17 IST" duration-ms="86072">
+  <suite started-at="2025-12-12T16:01:27 IST" name="Default suite" finished-at="2025-12-12T16:02:33 IST" duration-ms="65927">
     <groups>
     </groups>
-    <test started-at="2025-12-12T10:21:51 IST" name="Default test" finished-at="2025-12-12T10:23:17 IST" duration-ms="86072">
+    <test started-at="2025-12-12T16:01:27 IST" name="Default test" finished-at="2025-12-12T16:02:33 IST" duration-ms="65927">
       <class name="test.ERP_Test">
-        <test-method is-config="true" signature="urlloading()[pri:0, instance:test.ERP_Test@6cf0e0ba]" started-at="2025-12-12T10:21:51 IST" name="urlloading" finished-at="2025-12-12T10:21:54 IST" duration-ms="3737" status="PASS">
+        <test-method is-config="true" signature="urlloading()[pri:0, instance:test.ERP_Test@42a48628]" started-at="2025-12-12T16:01:27 IST" name="urlloading" finished-at="2025-12-12T16:01:31 IST" duration-ms="3265" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- urlloading -->
-        <test-method signature="login_test()[pri:0, instance:test.ERP_Test@6cf0e0ba]" started-at="2025-12-12T10:21:54 IST" name="login_test" finished-at="2025-12-12T10:22:01 IST" duration-ms="6477" status="PASS">
+        <test-method signature="login_test()[pri:0, instance:test.ERP_Test@42a48628]" started-at="2025-12-12T16:01:31 IST" name="login_test" finished-at="2025-12-12T16:01:37 IST" duration-ms="6682" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login_test -->
-        <test-method is-config="true" signature="browserclose(org.testng.ITestResult)[pri:0, instance:test.ERP_Test@6cf0e0ba]" started-at="2025-12-12T10:22:01 IST" name="browserclose" finished-at="2025-12-12T10:22:01 IST" duration-ms="3" status="PASS">
+        <test-method is-config="true" signature="browserclose(org.testng.ITestResult)[pri:0, instance:test.ERP_Test@42a48628]" started-at="2025-12-12T16:01:37 IST" name="browserclose" finished-at="2025-12-12T16:01:37 IST" duration-ms="2" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=login_test status=SUCCESS method=ERP_Test.login_test()[pri:0, instance:test.ERP_Test@6cf0e0ba] output={null}]]]>
+                <![CDATA[[TestResult name=login_test status=SUCCESS method=ERP_Test.login_test()[pri:0, instance:test.ERP_Test@42a48628] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserclose -->
-        <test-method signature="enquiry_create()[pri:1, instance:test.ERP_Test@6cf0e0ba]" started-at="2025-12-12T10:22:01 IST" name="enquiry_create" finished-at="2025-12-12T10:22:14 IST" duration-ms="12988" status="PASS">
+        <test-method signature="enquiry_create()[pri:1, instance:test.ERP_Test@42a48628]" started-at="2025-12-12T16:01:37 IST" name="enquiry_create" finished-at="2025-12-12T16:01:51 IST" duration-ms="13695" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- enquiry_create -->
-        <test-method is-config="true" signature="browserclose(org.testng.ITestResult)[pri:0, instance:test.ERP_Test@6cf0e0ba]" started-at="2025-12-12T10:22:14 IST" name="browserclose" finished-at="2025-12-12T10:22:14 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="browserclose(org.testng.ITestResult)[pri:0, instance:test.ERP_Test@42a48628]" started-at="2025-12-12T16:01:51 IST" name="browserclose" finished-at="2025-12-12T16:01:51 IST" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=enquiry_create status=SUCCESS method=ERP_Test.enquiry_create()[pri:1, instance:test.ERP_Test@6cf0e0ba] output={null}]]]>
+                <![CDATA[[TestResult name=enquiry_create status=SUCCESS method=ERP_Test.enquiry_create()[pri:1, instance:test.ERP_Test@42a48628] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserclose -->
-        <test-method signature="followup_from_enquiry_overiew()[pri:4, instance:test.ERP_Test@6cf0e0ba]" started-at="2025-12-12T10:22:14 IST" name="followup_from_enquiry_overiew" finished-at="2025-12-12T10:22:42 IST" duration-ms="28652" status="FAIL">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //button[@class='btn btn-sm btn-secondary me-1'] (tried for 20 second(s) with 500 milliseconds interval)
-Build info: version: '4.21.0', revision: '79ed462ef4'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.41, chrome: {chromedriverVersion: 143.0.7499.42 (24bdc8c48a0c..., userDataDir: C:\Users\amalr\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63203}, goog:processID: 8612, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63203/devtoo..., se:cdpVersion: 143.0.7499.41, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 6f4545ca5a65f58f21f734cc9dc51d2a]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //button[@class='btn btn-sm btn-secondary me-1'] (tried for 20 second(s) with 500 milliseconds interval)
-Build info: version: '4.21.0', revision: '79ed462ef4'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.41, chrome: {chromedriverVersion: 143.0.7499.42 (24bdc8c48a0c..., userDataDir: C:\Users\amalr\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63203}, goog:processID: 8612, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63203/devtoo..., se:cdpVersion: 143.0.7499.41, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 6f4545ca5a65f58f21f734cc9dc51d2a
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-at pages.Enquiry.enquiry_followup(Enquiry.java:394)
-at test.ERP_Test.followup_from_enquiry_overiew(ERP_Test.java:107)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:829)
-at org.testng.TestRunner.run(TestRunner.java:602)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
+        <test-method signature="followup_from_enquiry_overiew()[pri:4, instance:test.ERP_Test@42a48628]" started-at="2025-12-12T16:01:51 IST" name="followup_from_enquiry_overiew" finished-at="2025-12-12T16:02:04 IST" duration-ms="12623" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- followup_from_enquiry_overiew -->
-        <test-method is-config="true" signature="browserclose(org.testng.ITestResult)[pri:0, instance:test.ERP_Test@6cf0e0ba]" started-at="2025-12-12T10:22:42 IST" name="browserclose" finished-at="2025-12-12T10:22:43 IST" duration-ms="167" status="PASS">
+        <test-method is-config="true" signature="browserclose(org.testng.ITestResult)[pri:0, instance:test.ERP_Test@42a48628]" started-at="2025-12-12T16:02:04 IST" name="browserclose" finished-at="2025-12-12T16:02:04 IST" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=followup_from_enquiry_overiew status=FAILURE method=ERP_Test.followup_from_enquiry_overiew()[pri:4, instance:test.ERP_Test@6cf0e0ba] output={null}]]]>
+                <![CDATA[[TestResult name=followup_from_enquiry_overiew status=SUCCESS method=ERP_Test.followup_from_enquiry_overiew()[pri:4, instance:test.ERP_Test@42a48628] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserclose -->
-        <test-method signature="enquiry_hot()[pri:7, instance:test.ERP_Test@6cf0e0ba]" started-at="2025-12-12T10:22:43 IST" name="enquiry_hot" finished-at="2025-12-12T10:22:53 IST" duration-ms="10452" status="PASS">
+        <test-method signature="enquiry_hot()[pri:7, instance:test.ERP_Test@42a48628]" started-at="2025-12-12T16:02:04 IST" name="enquiry_hot" finished-at="2025-12-12T16:02:14 IST" duration-ms="10537" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- enquiry_hot -->
-        <test-method is-config="true" signature="browserclose(org.testng.ITestResult)[pri:0, instance:test.ERP_Test@6cf0e0ba]" started-at="2025-12-12T10:22:53 IST" name="browserclose" finished-at="2025-12-12T10:22:53 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="browserclose(org.testng.ITestResult)[pri:0, instance:test.ERP_Test@42a48628]" started-at="2025-12-12T16:02:14 IST" name="browserclose" finished-at="2025-12-12T16:02:14 IST" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=enquiry_hot status=SUCCESS method=ERP_Test.enquiry_hot()[pri:7, instance:test.ERP_Test@6cf0e0ba] output={null}]]]>
+                <![CDATA[[TestResult name=enquiry_hot status=SUCCESS method=ERP_Test.enquiry_hot()[pri:7, instance:test.ERP_Test@42a48628] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserclose -->
-        <test-method signature="quotation()[pri:8, instance:test.ERP_Test@6cf0e0ba]" started-at="2025-12-12T10:22:53 IST" name="quotation" finished-at="2025-12-12T10:22:56 IST" duration-ms="2448" status="FAIL">
-          <exception class="org.openqa.selenium.InvalidSelectorException">
-            <message>
-              <![CDATA[invalid selector: Unable to locate an element with the xpath expression (//textarea[@rows='3' and contains(@class,'textarea')] because of the following error:
-SyntaxError: Failed to execute 'evaluate' on 'Document': The string '(//textarea[@rows='3' and contains(@class,'textarea')]' is not a valid XPath expression.
-  (Session info: chrome=143.0.7499.41)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalid-selector-exception
-Build info: version: '4.21.0', revision: '79ed462ef4'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [6f4545ca5a65f58f21f734cc9dc51d2a, findElement {value=(//textarea[@rows='3' and contains(@class,'textarea')], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.41, chrome: {chromedriverVersion: 143.0.7499.42 (24bdc8c48a0c..., userDataDir: C:\Users\amalr\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63203}, goog:processID: 8612, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63203/devtoo..., se:cdpVersion: 143.0.7499.41, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 6f4545ca5a65f58f21f734cc9dc51d2a]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.InvalidSelectorException: invalid selector: Unable to locate an element with the xpath expression (//textarea[@rows='3' and contains(@class,'textarea')] because of the following error:
-SyntaxError: Failed to execute 'evaluate' on 'Document': The string '(//textarea[@rows='3' and contains(@class,'textarea')]' is not a valid XPath expression.
-  (Session info: chrome=143.0.7499.41)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalid-selector-exception
-Build info: version: '4.21.0', revision: '79ed462ef4'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [6f4545ca5a65f58f21f734cc9dc51d2a, findElement {value=(//textarea[@rows='3' and contains(@class,'textarea')], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.41, chrome: {chromedriverVersion: 143.0.7499.42 (24bdc8c48a0c..., userDataDir: C:\Users\amalr\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63203}, goog:processID: 8612, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63203/devtoo..., se:cdpVersion: 143.0.7499.41, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 6f4545ca5a65f58f21f734cc9dc51d2a
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-at pages.Quotation.quotation(Quotation.java:102)
-at test.ERP_Test.quotation(ERP_Test.java:139)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:829)
-at org.testng.TestRunner.run(TestRunner.java:602)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.InvalidSelectorException -->
+        <test-method signature="quotation()[pri:8, instance:test.ERP_Test@42a48628]" started-at="2025-12-12T16:02:14 IST" name="quotation" finished-at="2025-12-12T16:02:20 IST" duration-ms="5483" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quotation -->
-        <test-method is-config="true" signature="browserclose(org.testng.ITestResult)[pri:0, instance:test.ERP_Test@6cf0e0ba]" started-at="2025-12-12T10:22:56 IST" name="browserclose" finished-at="2025-12-12T10:22:56 IST" duration-ms="190" status="PASS">
+        <test-method is-config="true" signature="browserclose(org.testng.ITestResult)[pri:0, instance:test.ERP_Test@42a48628]" started-at="2025-12-12T16:02:20 IST" name="browserclose" finished-at="2025-12-12T16:02:20 IST" duration-ms="2" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=quotation status=FAILURE method=ERP_Test.quotation()[pri:8, instance:test.ERP_Test@6cf0e0ba] output={null}]]]>
+                <![CDATA[[TestResult name=quotation status=SUCCESS method=ERP_Test.quotation()[pri:8, instance:test.ERP_Test@42a48628] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserclose -->
-        <test-method signature="edit_quotation()[pri:9, instance:test.ERP_Test@6cf0e0ba]" started-at="2025-12-12T10:22:56 IST" name="edit_quotation" finished-at="2025-12-12T10:23:16 IST" duration-ms="20361" status="FAIL">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: /html/body/div[1]/div[1]/div[1]/div[2]/div/div/div/div[2]/div[2]/table (tried for 20 second(s) with 500 milliseconds interval)
-Build info: version: '4.21.0', revision: '79ed462ef4'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.41, chrome: {chromedriverVersion: 143.0.7499.42 (24bdc8c48a0c..., userDataDir: C:\Users\amalr\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63203}, goog:processID: 8612, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63203/devtoo..., se:cdpVersion: 143.0.7499.41, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 6f4545ca5a65f58f21f734cc9dc51d2a]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: /html/body/div[1]/div[1]/div[1]/div[2]/div/div/div/div[2]/div[2]/table (tried for 20 second(s) with 500 milliseconds interval)
-Build info: version: '4.21.0', revision: '79ed462ef4'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.41, chrome: {chromedriverVersion: 143.0.7499.42 (24bdc8c48a0c..., userDataDir: C:\Users\amalr\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63203}, goog:processID: 8612, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63203/devtoo..., se:cdpVersion: 143.0.7499.41, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 6f4545ca5a65f58f21f734cc9dc51d2a
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-at pages.Quotation.edit_quotation(Quotation.java:172)
-at test.ERP_Test.edit_quotation(ERP_Test.java:147)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:829)
-at org.testng.TestRunner.run(TestRunner.java:602)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
+        <test-method signature="edit_quotation()[pri:9, instance:test.ERP_Test@42a48628]" started-at="2025-12-12T16:02:20 IST" name="edit_quotation" finished-at="2025-12-12T16:02:23 IST" duration-ms="3089" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- edit_quotation -->
-        <test-method is-config="true" signature="browserclose(org.testng.ITestResult)[pri:0, instance:test.ERP_Test@6cf0e0ba]" started-at="2025-12-12T10:23:16 IST" name="browserclose" finished-at="2025-12-12T10:23:16 IST" duration-ms="179" status="PASS">
+        <test-method is-config="true" signature="browserclose(org.testng.ITestResult)[pri:0, instance:test.ERP_Test@42a48628]" started-at="2025-12-12T16:02:23 IST" name="browserclose" finished-at="2025-12-12T16:02:23 IST" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=edit_quotation status=FAILURE method=ERP_Test.edit_quotation()[pri:9, instance:test.ERP_Test@6cf0e0ba] output={null}]]]>
+                <![CDATA[[TestResult name=edit_quotation status=SUCCESS method=ERP_Test.edit_quotation()[pri:9, instance:test.ERP_Test@42a48628] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserclose -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:test.ERP_Test@6cf0e0ba]" started-at="2025-12-12T10:23:16 IST" name="teardown" finished-at="2025-12-12T10:23:17 IST" duration-ms="348" status="PASS">
+        <test-method signature="view_quotation()[pri:10, instance:test.ERP_Test@42a48628]" started-at="2025-12-12T16:02:23 IST" name="view_quotation" finished-at="2025-12-12T16:02:28 IST" duration-ms="4874" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- view_quotation -->
+        <test-method is-config="true" signature="browserclose(org.testng.ITestResult)[pri:0, instance:test.ERP_Test@42a48628]" started-at="2025-12-12T16:02:28 IST" name="browserclose" finished-at="2025-12-12T16:02:28 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=view_quotation status=SUCCESS method=ERP_Test.view_quotation()[pri:10, instance:test.ERP_Test@42a48628] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserclose -->
+        <test-method signature="quotation_followup()[pri:11, instance:test.ERP_Test@42a48628]" started-at="2025-12-12T16:02:28 IST" name="quotation_followup" finished-at="2025-12-12T16:02:33 IST" duration-ms="4922" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quotation_followup -->
+        <test-method is-config="true" signature="browserclose(org.testng.ITestResult)[pri:0, instance:test.ERP_Test@42a48628]" started-at="2025-12-12T16:02:33 IST" name="browserclose" finished-at="2025-12-12T16:02:33 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=quotation_followup status=SUCCESS method=ERP_Test.quotation_followup()[pri:11, instance:test.ERP_Test@42a48628] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserclose -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:test.ERP_Test@42a48628]" started-at="2025-12-12T16:02:33 IST" name="teardown" finished-at="2025-12-12T16:02:33 IST" duration-ms="677" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->

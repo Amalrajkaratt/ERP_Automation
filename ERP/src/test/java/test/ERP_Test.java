@@ -148,12 +148,20 @@ public class ERP_Test {
 	}
 	
 	
-//	@Test(priority = )
-	public void master_page()throws Exception {
-		
-		test=extent.createTest("Usertype");
-		Master_Page master=new Master_Page(driver);
-		master.role_assigning();
+	@Test(priority = 10)
+	public void view_quotation() throws Exception {
+
+		test = extent.createTest("View Quotation");
+		Quotation qt = new Quotation(driver, test);
+		qt.view_quotation();
+	}
+	
+	@Test(priority = 11)
+	public void quotation_followup() throws Exception {
+
+		test = extent.createTest("Quotation Followup");
+		Quotation qt = new Quotation(driver, test);
+		qt.quotation_followup();
 	}
 	
 	
