@@ -45,7 +45,8 @@ public class Enquiry {
 	By lead_source=By.id("leadsource");
 	By next_followup=By.id("gross-total");
 	By assign_to=By.id("assignto");
-	By multiple_assigne=By.xpath("//*[@id=\"app\"]/div[1]/div[1]/div/div[2]/div/form/div/div[2]/div/div[7]/div/input");
+	By multiple_assigne=By.xpath("//input[@placeholder='Select enquiry assignee']");
+	By firstLi = By.xpath("//label[normalize-space()='You']/preceding-sibling::input[@type='checkbox']");
 	By remarks=By.id("enquiry-description-text-area");
 	By enquired_for=By.xpath("//*[@id=\"app\"]/div[1]/div/div/div[2]/div/form/div/div[2]/div[6]/div/div/table/tfoot/tr/td[1]/div/div[1]/div/div[1]");
 	By firstRow = By.xpath("//table/tbody/tr[1]");
@@ -170,29 +171,16 @@ public class Enquiry {
 	        	List<WebElement> Multiple_assignees=driver.findElements(multiple_assigne);
 	        	if(Multiple_assignees.size()>0)
 	        	{
-	        		WebElement Multiple_assignee=Multiple_assignees.get(0);
-	        		Multiple_assignee.click();
-	                // Locate the multi-select container
-	                WebElement multiSelectContainer = driver.findElement(By.cssSelector(".list-container"));
-
-	                // Find the checkboxes
-	                List<WebElement> checkboxes = multiSelectContainer.findElements(By.tagName("input"));
-
-	                // Select the checkbox with the text "Prabhakaran"
-	                for (WebElement checkbox : checkboxes) {
-	                    WebElement label = checkbox.findElement(By.xpath("./following-sibling::span"));
-	                    String labelText = label.getText();
-	                    if (labelText.equals("you")) {
-	                        checkbox.click();
-	                        break;
-	                    }
-	                }		        	tes.log(Status.PASS, "Multiple assignee option is");
+	        		wait.until(ExpectedConditions.elementToBeClickable(multiple_assigne)).click();
+	        		wait.until(ExpectedConditions.elementToBeClickable(firstLi)).click();
+	        		
+	                  
+	                }		        
+	                tes.log(Status.PASS, "Multiple assignee option is");
 	        	}
-	        	else
-	        	{
-	        		tes.log(Status.INFO, "Assign option is not present");
-	        	}
-	        }
+	        	
+	        
+	
 
 	        // Scroll down
 	        JavascriptExecutor js = (JavascriptExecutor) driver;
