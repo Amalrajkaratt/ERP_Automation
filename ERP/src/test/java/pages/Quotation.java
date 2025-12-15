@@ -149,7 +149,7 @@ public class Quotation {
 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", driver.findElement(rate));
 
 		driver.findElement(rate).clear();
-		driver.findElement(rate).sendKeys("210000");
+		driver.findElement(rate).sendKeys("10000");
 		
 		List<WebElement> Subsidy=driver.findElements(subsidy);
 		
@@ -211,7 +211,6 @@ public class Quotation {
 		    }
 		}
 
-		// Print success
 		System.out.println("New tab opened successfully");
 
 		// Hold for 3 seconds

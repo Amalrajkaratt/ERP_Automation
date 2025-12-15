@@ -32,6 +32,7 @@ public class Enquiry {
 //	Object repository
 	
 	By sidebar=By.xpath("/html/body/div[1]/div[1]/header/div/div/div[2]/a");
+	By themeToggle = By.xpath("//a[contains(@class,'layout-setting')]");
 	
 //	By crm=By.xpath("/html/body/div[1]/div[1]/aside/div[2]/div[1]/div[2]/div/div/div/nav/ul/li[4]/a");
 	By crm=By.xpath("//span[normalize-space(.)='CRM']/parent::a");
@@ -50,7 +51,7 @@ public class Enquiry {
 	By remarks=By.id("enquiry-description-text-area");
 	By enquired_for=By.xpath("//*[@id=\"app\"]/div[1]/div/div/div[2]/div/form/div/div[2]/div[6]/div/div/table/tfoot/tr/td[1]/div/div[1]/div/div[1]");
 	By firstRow = By.xpath("//table/tbody/tr[1]");
-	By quantity=By.id("qty");
+	By quantity=By.xpath("//input[@placeholder='Enter quantity']");
 	By description=By.id("item-description");
 	By enquiry_save_btn=By.xpath("//button[@class='btn btn-primary-light me-2']");
 	By confirm_btn=By.xpath("/html/body/div[9]/div/div[3]/button[1]");
@@ -86,7 +87,8 @@ public class Enquiry {
 	
 //	Enquiry 
 	public void enquiry() throws Exception {
-	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+	    driver.findElement(themeToggle).click();
 
 	
 	        wait.until(ExpectedConditions.visibilityOfElementLocated(crm)).click();
@@ -159,26 +161,33 @@ public class Enquiry {
 
 //	         Assign To 
 	        List<WebElement> Single_assignee=driver.findElements(assign_to);
-	        if(Single_assignee.size()>0)
-	        {
-	        	WebElement Assign_to = Single_assignee.get(0);
-	        	Select sel1 = new Select(Assign_to);
-	        	sel1.selectByVisibleText("You");
-	        	tes.log(Status.PASS, "Single assignee selected");
+	        if (Single_assignee.size() > 0) {
+	            // Case 1: Single Assignee Dropdown
+	            WebElement assignTo = Single_assignee.get(0);
+	            Select sel1 = new Select(assignTo);
+	            sel1.selectByVisibleText("You");
+	            System.out.println("Single assignee available");
+	            tes.log(Status.PASS, "Single assignee selected");
+
+	        } else {
+	            // Try multiple assignee
+	            List<WebElement> multipleAssignees = driver.findElements(multiple_assigne);
+
+	            if (multipleAssignees.size() > 0) {
+	                // Case 2: Multiple Assignee Option
+	                wait.until(ExpectedConditions.elementToBeClickable(multiple_assigne)).click();
+	                wait.until(ExpectedConditions.elementToBeClickable(firstLi)).click();
+	                System.out.println("Multiple assignee available");
+	                tes.log(Status.PASS, "Multiple assignee selected");
+
+	            } else {
+	                // Case 3: No assignee options → Auto-assign enabled
+	            	System.out.println("No assignee options available, auto-assign enabled");
+	                tes.log(Status.INFO, "Auto-assignee is enabled. Assignee options are not present.");
+	            }
 	        }
-	        else
-	        {
-	        	List<WebElement> Multiple_assignees=driver.findElements(multiple_assigne);
-	        	if(Multiple_assignees.size()>0)
-	        	{
-	        		wait.until(ExpectedConditions.elementToBeClickable(multiple_assigne)).click();
-	        		wait.until(ExpectedConditions.elementToBeClickable(firstLi)).click();
-	        		
-	                  
-	                }		        
-	                tes.log(Status.PASS, "Multiple assignee option is");
-	        	}
-	        	
+
+
 	        
 	
 
@@ -217,6 +226,8 @@ public class Enquiry {
 	        if (Quantity.size() > 0) {
 	            // Field is present
 	            WebElement field = Quantity.get(0);
+	            field.clear();
+	            Thread.sleep(3000);
 	            field.sendKeys("5");
 	            tes.log(Status.PASS, "Quantity field found and value passed");
 	        } 
@@ -477,7 +488,7 @@ public class Enquiry {
 	
 	    String actual_url= driver.getCurrentUrl();
 	    System.out.println(actual_url+"\n");
-	    String quotation_exp_url="https://test.erp.progbiz.io/quotation/0/";
+	    String quotation_exp_url="https://erptest.prog-biz.com/quotation/0/";
 	    boolean isExpected=actual_url.matches(quotation_exp_url+ ".*");
 	    if (isExpected) {
 			tes.log(Status.PASS, "The quotation page opens");

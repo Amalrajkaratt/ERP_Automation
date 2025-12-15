@@ -1,9 +1,16 @@
 package pages;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.time.Duration;
 
+import org.apache.poi.ss.usermodel.DataFormatter;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -16,9 +23,9 @@ public class Login {
 	ExtentTest test1;
 	
 //	Object repository
-	By company_code=By.xpath("/html/body/div[1]/div[1]/form/div/div/div/div/div[2]/div[1]/input");
-	By username=By.xpath("/html/body/div[1]/div[1]/form/div/div/div/div/div[2]/div[2]/input");
-	By password=By.xpath("/html/body/div[1]/div[1]/form/div/div/div/div/div[2]/div[3]/div[1]/input");
+	By company_code=By.id("companycode");
+	By username=By.id("signin-username");
+	By password=By.id("signin-password");
 	By signin_btn=By.xpath("//*[@id=\"app\"]/div[1]/form/div/div/div/div/div[2]/div[4]/button");
 	
 //	Constructor
@@ -27,6 +34,66 @@ public class Login {
 		this.test1=test1;
 	}
 	
+	//Data driven test method
+	public void data_driven_test() throws IOException, InterruptedException {
+
+		File f = new File(System.getProperty("user.dir")+ "/src/test/resources/testdata/Datadriven.xlsx");
+		System.out.println(System.getProperty("user.dir"));
+
+		FileInputStream fi = new FileInputStream(f);
+	    XSSFWorkbook wb = new XSSFWorkbook(fi);
+	    XSSFSheet sh = wb.getSheet("Sheet1");
+
+	    DataFormatter formatter = new DataFormatter();
+
+	    System.out.println("Total rows found = " + sh.getLastRowNum());
+
+	    for (int i = 1; i <= sh.getLastRowNum(); i++) {
+
+	        // Create node FIRST
+	        ExtentTest iterationTest =
+	                test1.createNode("Login Test - Row " + i);
+
+	        String Companycode = formatter.formatCellValue(sh.getRow(i).getCell(0));
+	        String Username    = formatter.formatCellValue(sh.getRow(i).getCell(1));
+	        String Password    = formatter.formatCellValue(sh.getRow(i).getCell(2));
+
+	        iterationTest.log(Status.INFO, "Company Code: " + Companycode);
+	        iterationTest.log(Status.INFO, "Username: " + Username);
+	        iterationTest.log(Status.INFO, "Password: ******");
+
+	        // Ensure we are on login page
+	        driver.get("https://erptest.prog-biz.com/");
+	        Thread.sleep(1500);
+
+	        driver.findElement(company_code).clear();
+	        driver.findElement(company_code).sendKeys(Companycode);
+
+	        driver.findElement(username).clear();
+	        driver.findElement(username).sendKeys(Username);
+
+	        driver.findElement(password).clear();
+	        driver.findElement(password).sendKeys(Password);
+
+	        driver.findElement(signin_btn).click();
+	        Thread.sleep(2000);
+
+	        String currentURL = driver.getCurrentUrl();
+	        iterationTest.log(Status.INFO, "URL after login: " + currentURL);
+
+	        if (currentURL.contains("home")) {
+	            iterationTest.log(Status.PASS, "Login successful");
+	        } else {
+	            iterationTest.log(Status.FAIL, "Login failed");
+	        }
+	    }
+
+	    wb.close();
+	    fi.close();
+	}
+
+
+
 	
 	public void login()throws Exception {
 		
@@ -48,6 +115,15 @@ public class Login {
 		driver.findElement(signin_btn).click();
 		
 		Thread.sleep(3000);
+        String currentURL = driver.getCurrentUrl();
+
+        if (currentURL.contains("dashboard") || currentURL.contains("home")) {
+        	System.out.println("Login successful - redirected to dashboard : "+currentURL);
+            test1.log(Status.PASS, "Login successful — redirected to dashboard");
+        } else {
+        	driver.quit();
+            test1.log(Status.FAIL, "Login failed — did not reach dashboard");
+        }
 //		Login ends
 
 		
