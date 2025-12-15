@@ -37,7 +37,7 @@ public class Login {
 	//Data driven test method
 	public void data_driven_test() throws IOException, InterruptedException {
 
-		File f = new File(System.getProperty("user.dir")+ "/src/test/resources/testdata/Datadriven.xlsx");
+		File f = new File(System.getProperty("user.dir")+ "/src/test/resources/Datadriven.xlsx");
 		System.out.println(System.getProperty("user.dir"));
 
 		FileInputStream fi = new FileInputStream(f);
@@ -60,7 +60,7 @@ public class Login {
 
 	        iterationTest.log(Status.INFO, "Company Code: " + Companycode);
 	        iterationTest.log(Status.INFO, "Username: " + Username);
-	        iterationTest.log(Status.INFO, "Password: ******");
+	        iterationTest.log(Status.INFO, "Password: " + Password);
 
 	        // Ensure we are on login page
 	        driver.get("https://erptest.prog-biz.com/");
@@ -81,11 +81,12 @@ public class Login {
 	        String currentURL = driver.getCurrentUrl();
 	        iterationTest.log(Status.INFO, "URL after login: " + currentURL);
 
-	        if (currentURL.contains("home")) {
-	            iterationTest.log(Status.PASS, "Login successful");
+	        if (currentURL.contains("home") || currentURL.contains("dashboard")) {
+	            iterationTest.fail("Login successful with invalid credentials");
 	        } else {
-	            iterationTest.log(Status.FAIL, "Login failed");
+	            iterationTest.pass("Login failed. Stayed on: " + currentURL);
 	        }
+
 	    }
 
 	    wb.close();
@@ -97,6 +98,7 @@ public class Login {
 	
 	public void login()throws Exception {
 		
+		driver.navigate().refresh();
 		Thread.sleep(2000);
 		WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(20));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(company_code)).click();

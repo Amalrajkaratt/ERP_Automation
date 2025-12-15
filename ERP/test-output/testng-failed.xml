@@ -5,10 +5,17 @@
     <classes>
       <class name="test.ERP_Test">
         <methods>
+          <include name="enquiry_hot"/>
           <include name="urlloading"/>
-          <include name="browserclose"/>
+          <include name="followup_details"/>
+          <include name="afterMethod"/>
+          <include name="edit_quotation"/>
+          <include name="quotation_followup"/>
+          <include name="view_quotation"/>
+          <include name="edit_enquiry"/>
+          <include name="quotation"/>
           <include name="teardown"/>
-          <include name="data_driven_testing"/>
+          <include name="followup_from_enquiry_overiew"/>
         </methods>
       </class> <!-- test.ERP_Test -->
     </classes>

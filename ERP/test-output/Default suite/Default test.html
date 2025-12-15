@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>12/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Dec 15 12:10:44 IST 2025</td>
+<td>Started on:</td><td>Mon Dec 15 17:35:18 IST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>13 seconds (13639 ms)</td>
+<tr><td>Total time:</td><td>198 seconds (198284 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,89 +67,6 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td><b>Attribute(s)</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='test.ERP_Test.data_driven_testing()'><b>data_driven_testing</b><br>Test class: test.ERP_Test</td>
-<td><div><pre>java.io.FileNotFoundException: C:\Users\amalr\git\repository\ERP\src\test\resources\testdata\Datadriven.xlsx (The system cannot find the path specified)
-	at java.base/java.io.FileInputStream.open0(Native Method)
-	at java.base/java.io.FileInputStream.open(FileInputStream.java:216)
-	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:157)
-	at pages.Login.data_driven_test(Login.java:43)
-	at test.ERP_Test.data_driven_testing(ERP_Test.java:73)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:829)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-	at org.testng.TestNG.runSuites(TestNG.java:1099)
-	at org.testng.TestNG.run(TestNG.java:1067)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1335061928", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1335061928'><pre>java.io.FileNotFoundException: C:\Users\amalr\git\repository\ERP\src\test\resources\testdata\Datadriven.xlsx (The system cannot find the path specified)
-	at java.base/java.io.FileInputStream.open0(Native Method)
-	at java.base/java.io.FileInputStream.open(FileInputStream.java:216)
-	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:157)
-	at pages.Login.data_driven_test(Login.java:43)
-	at test.ERP_Test.data_driven_testing(ERP_Test.java:73)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:829)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-	at org.testng.TestNG.runSuites(TestNG.java:1099)
-	at org.testng.TestNG.run(TestNG.java:1067)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div></td>
-<td>0</td>
-<td>test.ERP_Test@49e53c76</td></tr>
-</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -159,10 +76,65 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='test.ERP_Test.login_test()'><b>login_test</b><br>Test class: test.ERP_Test</td>
+<td title='test.ERP_Test.edit_quotation()'><b>edit_quotation</b><br>Test class: test.ERP_Test</td>
+<td></td>
+<td>3</td>
+<td>test.ERP_Test@6302bbb1</td></tr>
+<tr>
+<td title='test.ERP_Test.followup_from_enquiry_overiew()'><b>followup_from_enquiry_overiew</b><br>Test class: test.ERP_Test</td>
+<td></td>
+<td>13</td>
+<td>test.ERP_Test@6302bbb1</td></tr>
+<tr>
+<td title='test.ERP_Test.edit_enquiry()'><b>edit_enquiry</b><br>Test class: test.ERP_Test</td>
+<td></td>
+<td>8</td>
+<td>test.ERP_Test@6302bbb1</td></tr>
+<tr>
+<td title='test.ERP_Test.followup_details()'><b>followup_details</b><br>Test class: test.ERP_Test</td>
+<td></td>
+<td>7</td>
+<td>test.ERP_Test@6302bbb1</td></tr>
+<tr>
+<td title='test.ERP_Test.quotation_followup()'><b>quotation_followup</b><br>Test class: test.ERP_Test</td>
+<td></td>
+<td>4</td>
+<td>test.ERP_Test@6302bbb1</td></tr>
+<tr>
+<td title='test.ERP_Test.view_quotation()'><b>view_quotation</b><br>Test class: test.ERP_Test</td>
 <td></td>
 <td>6</td>
-<td>test.ERP_Test@49e53c76</td></tr>
+<td>test.ERP_Test@6302bbb1</td></tr>
+<tr>
+<td title='test.ERP_Test.login_test()'><b>login_test</b><br>Test class: test.ERP_Test</td>
+<td></td>
+<td>7</td>
+<td>test.ERP_Test@6302bbb1</td></tr>
+<tr>
+<td title='test.ERP_Test.enquiry_hot()'><b>enquiry_hot</b><br>Test class: test.ERP_Test</td>
+<td></td>
+<td>10</td>
+<td>test.ERP_Test@6302bbb1</td></tr>
+<tr>
+<td title='test.ERP_Test.data_driven_testing()'><b>data_driven_testing</b><br>Test class: test.ERP_Test</td>
+<td></td>
+<td>95</td>
+<td>test.ERP_Test@6302bbb1</td></tr>
+<tr>
+<td title='test.ERP_Test.enquiry_overview()'><b>enquiry_overview</b><br>Test class: test.ERP_Test</td>
+<td></td>
+<td>8</td>
+<td>test.ERP_Test@6302bbb1</td></tr>
+<tr>
+<td title='test.ERP_Test.enquiry_create()'><b>enquiry_create</b><br>Test class: test.ERP_Test</td>
+<td></td>
+<td>17</td>
+<td>test.ERP_Test@6302bbb1</td></tr>
+<tr>
+<td title='test.ERP_Test.quotation()'><b>quotation</b><br>Test class: test.ERP_Test</td>
+<td></td>
+<td>5</td>
+<td>test.ERP_Test@6302bbb1</td></tr>
 </table><p>
 </body>
 </html>
