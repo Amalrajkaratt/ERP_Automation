@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="10" passed="10" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-12-17T15:12:31 IST" name="Default suite" finished-at="2025-12-17T15:13:58 IST" duration-ms="87070">
+  <suite started-at="2025-12-17T15:26:52 IST" name="Default suite" finished-at="2025-12-17T15:28:21 IST" duration-ms="89199">
     <groups>
     </groups>
-    <test started-at="2025-12-17T15:12:31 IST" name="Default test" finished-at="2025-12-17T15:13:58 IST" duration-ms="87070">
+    <test started-at="2025-12-17T15:26:52 IST" name="Default test" finished-at="2025-12-17T15:28:21 IST" duration-ms="89199">
       <class name="test.ERP_Test">
-        <test-method is-config="true" signature="urlloading()[pri:0, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-17T15:12:31 IST" name="urlloading" finished-at="2025-12-17T15:12:35 IST" duration-ms="4106" status="PASS">
+        <test-method is-config="true" signature="urlloading()[pri:0, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-17T15:26:52 IST" name="urlloading" finished-at="2025-12-17T15:26:58 IST" duration-ms="5414" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- urlloading -->
-        <test-method signature="login_test()[pri:1, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-17T15:12:35 IST" name="login_test" finished-at="2025-12-17T15:12:43 IST" duration-ms="8019" status="PASS">
+        <test-method signature="login_test()[pri:1, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-17T15:26:58 IST" name="login_test" finished-at="2025-12-17T15:27:10 IST" duration-ms="12401" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login_test -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-17T15:12:43 IST" name="afterMethod" finished-at="2025-12-17T15:12:44 IST" duration-ms="201" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-17T15:27:10 IST" name="afterMethod" finished-at="2025-12-17T15:27:10 IST" duration-ms="197" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -26,11 +26,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method signature="enquiry_create()[pri:2, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-17T15:12:44 IST" name="enquiry_create" finished-at="2025-12-17T15:13:03 IST" duration-ms="19447" status="PASS">
+        <test-method signature="enquiry_create()[pri:2, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-17T15:27:10 IST" name="enquiry_create" finished-at="2025-12-17T15:27:26 IST" duration-ms="15778" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- enquiry_create -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-17T15:13:03 IST" name="afterMethod" finished-at="2025-12-17T15:13:03 IST" duration-ms="223" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-17T15:27:26 IST" name="afterMethod" finished-at="2025-12-17T15:27:26 IST" duration-ms="198" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -41,11 +41,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method signature="enquiry_overview()[pri:3, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-17T15:13:03 IST" name="enquiry_overview" finished-at="2025-12-17T15:13:12 IST" duration-ms="8491" status="PASS">
+        <test-method signature="enquiry_overview()[pri:3, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-17T15:27:26 IST" name="enquiry_overview" finished-at="2025-12-17T15:27:35 IST" duration-ms="8523" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- enquiry_overview -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-17T15:13:12 IST" name="afterMethod" finished-at="2025-12-17T15:13:12 IST" duration-ms="346" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-17T15:27:35 IST" name="afterMethod" finished-at="2025-12-17T15:27:35 IST" duration-ms="236" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -56,11 +56,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method signature="followup_from_enquiry_overiew()[pri:5, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-17T15:13:12 IST" name="followup_from_enquiry_overiew" finished-at="2025-12-17T15:13:21 IST" duration-ms="8922" status="PASS">
+        <test-method signature="followup_from_enquiry_overiew()[pri:5, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-17T15:27:35 IST" name="followup_from_enquiry_overiew" finished-at="2025-12-17T15:27:44 IST" duration-ms="8948" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- followup_from_enquiry_overiew -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-17T15:13:21 IST" name="afterMethod" finished-at="2025-12-17T15:13:21 IST" duration-ms="244" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-17T15:27:44 IST" name="afterMethod" finished-at="2025-12-17T15:27:44 IST" duration-ms="207" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -71,11 +71,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method signature="followup_details()[pri:6, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-17T15:13:21 IST" name="followup_details" finished-at="2025-12-17T15:13:28 IST" duration-ms="7022" status="PASS">
+        <test-method signature="followup_details()[pri:6, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-17T15:27:44 IST" name="followup_details" finished-at="2025-12-17T15:27:51 IST" duration-ms="7099" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- followup_details -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-17T15:13:28 IST" name="afterMethod" finished-at="2025-12-17T15:13:28 IST" duration-ms="229" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-17T15:27:51 IST" name="afterMethod" finished-at="2025-12-17T15:27:52 IST" duration-ms="257" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -86,11 +86,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method signature="enquiry_hot()[pri:8, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-17T15:13:28 IST" name="enquiry_hot" finished-at="2025-12-17T15:13:39 IST" duration-ms="10897" status="PASS">
+        <test-method signature="enquiry_hot()[pri:8, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-17T15:27:52 IST" name="enquiry_hot" finished-at="2025-12-17T15:28:03 IST" duration-ms="10825" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- enquiry_hot -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-17T15:13:39 IST" name="afterMethod" finished-at="2025-12-17T15:13:40 IST" duration-ms="197" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-17T15:28:03 IST" name="afterMethod" finished-at="2025-12-17T15:28:03 IST" duration-ms="188" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -101,11 +101,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method signature="quotation()[pri:9, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-17T15:13:40 IST" name="quotation" finished-at="2025-12-17T15:13:45 IST" duration-ms="5501" status="PASS">
+        <test-method signature="quotation()[pri:9, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-17T15:28:03 IST" name="quotation" finished-at="2025-12-17T15:28:08 IST" duration-ms="5447" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quotation -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-17T15:13:45 IST" name="afterMethod" finished-at="2025-12-17T15:13:45 IST" duration-ms="370" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-17T15:28:08 IST" name="afterMethod" finished-at="2025-12-17T15:28:09 IST" duration-ms="299" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -116,11 +116,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method signature="edit_quotation()[pri:10, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-17T15:13:45 IST" name="edit_quotation" finished-at="2025-12-17T15:13:48 IST" duration-ms="2509" status="PASS">
+        <test-method signature="edit_quotation()[pri:10, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-17T15:28:09 IST" name="edit_quotation" finished-at="2025-12-17T15:28:11 IST" duration-ms="2524" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- edit_quotation -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-17T15:13:48 IST" name="afterMethod" finished-at="2025-12-17T15:13:48 IST" duration-ms="342" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-17T15:28:11 IST" name="afterMethod" finished-at="2025-12-17T15:28:11 IST" duration-ms="248" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -131,11 +131,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method signature="view_quotation()[pri:11, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-17T15:13:48 IST" name="view_quotation" finished-at="2025-12-17T15:13:53 IST" duration-ms="4345" status="PASS">
+        <test-method signature="view_quotation()[pri:11, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-17T15:28:11 IST" name="view_quotation" finished-at="2025-12-17T15:28:16 IST" duration-ms="4426" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- view_quotation -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-17T15:13:53 IST" name="afterMethod" finished-at="2025-12-17T15:13:53 IST" duration-ms="332" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-17T15:28:16 IST" name="afterMethod" finished-at="2025-12-17T15:28:16 IST" duration-ms="393" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -146,11 +146,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method signature="quotation_followup()[pri:12, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-17T15:13:53 IST" name="quotation_followup" finished-at="2025-12-17T15:13:58 IST" duration-ms="4708" status="PASS">
+        <test-method signature="quotation_followup()[pri:12, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-17T15:28:16 IST" name="quotation_followup" finished-at="2025-12-17T15:28:21 IST" duration-ms="4677" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quotation_followup -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-17T15:13:58 IST" name="afterMethod" finished-at="2025-12-17T15:13:58 IST" duration-ms="189" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-17T15:28:21 IST" name="afterMethod" finished-at="2025-12-17T15:28:21 IST" duration-ms="200" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -161,7 +161,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-17T15:13:58 IST" name="teardown" finished-at="2025-12-17T15:13:58 IST" duration-ms="363" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-17T15:28:21 IST" name="teardown" finished-at="2025-12-17T15:28:21 IST" duration-ms="380" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
