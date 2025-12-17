@@ -35,7 +35,8 @@
 		<!-- slideout menu -->
 		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
 			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
-						<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
+						<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
+			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
 		</ul>
 		<!-- report name -->
 		<span class='report-name'>ERP CRM Report</span>
@@ -44,7 +45,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Dec 15, 2025 05:35:18 PM</span>
+			<span class='label blue darken-3 suite-start-time'>Dec 17, 2025 12:26:29 PM</span>
 			</a>
 		</ul>
 	</div>
@@ -60,6 +61,7 @@
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
 										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+					<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -95,31 +97,17 @@
 	</section>
 <div id='test-view-charts' class='subview-full'>
     <div id='charts-row' class='row nm-v nm-h'>
-        <div class='col s12 m6 l6 np-h'>
+        <div class='col s12 m12 l12 np-h'>
             <div class='card-panel nm-v'>
                 <div class='left panel-name'>Tests</div>
                 <div class='chart-box' style="max-height:94px;">
                     <canvas id='parent-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>12</span> test(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='40%'><span class='strong'>4</span> test(s) passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
-                </div>
-            </div>
-        </div>
-        <div class='col s12 m6 l6 np-h'>
-            <div class='card-panel nm-v'>
-                <div class='left panel-name'>Steps</div>
-                <div class='chart-box' style="max-height:94px;">
-                    <canvas id='child-analysis' width='90' height='70'></canvas>
-                </div>
-                <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>18</span> step(s) passed</span>
-                </div>
-                <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+                    <span class='strong tooltipped' data-position='top' data-tooltip='60%'>6</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
                 </div>
             </div>
         </div>
@@ -137,1167 +125,17 @@
 </div>	<div class='subview-left left'>
 		<div class='view-summary'>
 			<ul id='test-collection' class='test-collection'>
-				<li class='test displayed active has-leaf pass' status='pass' bdd='false' test-id='1'>
-					<div class='test-heading'>
-						<span class='test-name'>Data Driven testing</span>
-						<span class='test-time'>Dec 15, 2025 05:35:26 PM</span>
-						<span class='test-status right pass'>pass</span>
-					</div>
-					<div class='test-content hide'>
-<div class='test-time-info'>
-	<span class='label start-time'>Dec 15, 2025 05:35:26 PM</span>
-	<span class='label end-time'>Dec 15, 2025 05:36:59 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 1m 32s+439ms</span>
-</div>
-<ul class='collapsible node-list' data-collapsible='accordion'>
-	<li class='node level-1 leaf pass' status='pass' test-id='2'>
-		<div class='collapsible-header'>
-			<div class='node-name'>Login Test - Row 1</div>
-			<span class='node-time'>Dec 15, 2025 05:35:26 PM</span>
-			&middot; <span class='node-duration'>0h 0m 9s+859ms</span>
-			<span class='test-status right pass'>pass</span>
-		</div>
-		<div class='collapsible-body'>
-			<div class='node-steps'>
-				<table class='bordered table-results'>
-					<thead>
-						<tr>
-							<th>Status</th>
-							<th>Timestamp</th>
-							<th>Details</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr class='log' status='info'>
-							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-							<td class='timestamp'>5:35:26 PM</td>
-							<td class='step-details'>
-									Company Code: test
-								
-							</td>
-						</tr>
-						<tr class='log' status='info'>
-							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-							<td class='timestamp'>5:35:26 PM</td>
-							<td class='step-details'>
-									Username: admin
-								
-							</td>
-						</tr>
-						<tr class='log' status='info'>
-							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-							<td class='timestamp'>5:35:26 PM</td>
-							<td class='step-details'>
-									Password: 123
-								
-							</td>
-						</tr>
-						<tr class='log' status='info'>
-							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-							<td class='timestamp'>5:35:36 PM</td>
-							<td class='step-details'>
-									URL after login: https://erptest.prog-biz.com/login
-								
-							</td>
-						</tr>
-						<tr class='log' status='pass'>
-							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-							<td class='timestamp'>5:35:36 PM</td>
-							<td class='step-details'>
-									Login failed. Stayed on: https://erptest.prog-biz.com/login
-								
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-		</div>
-	</li>
-	<li class='node level-1 leaf pass' status='pass' test-id='3'>
-		<div class='collapsible-header'>
-			<div class='node-name'>Login Test - Row 2</div>
-			<span class='node-time'>Dec 15, 2025 05:35:36 PM</span>
-			&middot; <span class='node-duration'>0h 0m 4s+939ms</span>
-			<span class='test-status right pass'>pass</span>
-		</div>
-		<div class='collapsible-body'>
-			<div class='node-steps'>
-				<table class='bordered table-results'>
-					<thead>
-						<tr>
-							<th>Status</th>
-							<th>Timestamp</th>
-							<th>Details</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr class='log' status='info'>
-							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-							<td class='timestamp'>5:35:36 PM</td>
-							<td class='step-details'>
-									Company Code: MWTTEST
-								
-							</td>
-						</tr>
-						<tr class='log' status='info'>
-							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-							<td class='timestamp'>5:35:36 PM</td>
-							<td class='step-details'>
-									Username: administrator
-								
-							</td>
-						</tr>
-						<tr class='log' status='info'>
-							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-							<td class='timestamp'>5:35:36 PM</td>
-							<td class='step-details'>
-									Password: 123
-								
-							</td>
-						</tr>
-						<tr class='log' status='info'>
-							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-							<td class='timestamp'>5:35:41 PM</td>
-							<td class='step-details'>
-									URL after login: https://erptest.prog-biz.com/login
-								
-							</td>
-						</tr>
-						<tr class='log' status='pass'>
-							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-							<td class='timestamp'>5:35:41 PM</td>
-							<td class='step-details'>
-									Login failed. Stayed on: https://erptest.prog-biz.com/login
-								
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-		</div>
-	</li>
-	<li class='node level-1 leaf pass' status='pass' test-id='4'>
-		<div class='collapsible-header'>
-			<div class='node-name'>Login Test - Row 3</div>
-			<span class='node-time'>Dec 15, 2025 05:35:41 PM</span>
-			&middot; <span class='node-duration'>0h 0m 6s+142ms</span>
-			<span class='test-status right pass'>pass</span>
-		</div>
-		<div class='collapsible-body'>
-			<div class='node-steps'>
-				<table class='bordered table-results'>
-					<thead>
-						<tr>
-							<th>Status</th>
-							<th>Timestamp</th>
-							<th>Details</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr class='log' status='info'>
-							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-							<td class='timestamp'>5:35:41 PM</td>
-							<td class='step-details'>
-									Company Code: MWTTEST
-								
-							</td>
-						</tr>
-						<tr class='log' status='info'>
-							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-							<td class='timestamp'>5:35:41 PM</td>
-							<td class='step-details'>
-									Username: admin
-								
-							</td>
-						</tr>
-						<tr class='log' status='info'>
-							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-							<td class='timestamp'>5:35:41 PM</td>
-							<td class='step-details'>
-									Password: 123456
-								
-							</td>
-						</tr>
-						<tr class='log' status='info'>
-							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-							<td class='timestamp'>5:35:47 PM</td>
-							<td class='step-details'>
-									URL after login: https://erptest.prog-biz.com/login
-								
-							</td>
-						</tr>
-						<tr class='log' status='pass'>
-							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-							<td class='timestamp'>5:35:47 PM</td>
-							<td class='step-details'>
-									Login failed. Stayed on: https://erptest.prog-biz.com/login
-								
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-		</div>
-	</li>
-	<li class='node level-1 leaf pass' status='pass' test-id='5'>
-		<div class='collapsible-header'>
-			<div class='node-name'>Login Test - Row 4</div>
-			<span class='node-time'>Dec 15, 2025 05:35:47 PM</span>
-			&middot; <span class='node-duration'>0h 0m 6s+401ms</span>
-			<span class='test-status right pass'>pass</span>
-		</div>
-		<div class='collapsible-body'>
-			<div class='node-steps'>
-				<table class='bordered table-results'>
-					<thead>
-						<tr>
-							<th>Status</th>
-							<th>Timestamp</th>
-							<th>Details</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr class='log' status='info'>
-							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-							<td class='timestamp'>5:35:47 PM</td>
-							<td class='step-details'>
-									Company Code: MWTTEST
-								
-							</td>
-						</tr>
-						<tr class='log' status='info'>
-							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-							<td class='timestamp'>5:35:47 PM</td>
-							<td class='step-details'>
-									Username: ' OR 1=1 --
-								
-							</td>
-						</tr>
-						<tr class='log' status='info'>
-							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-							<td class='timestamp'>5:35:47 PM</td>
-							<td class='step-details'>
-									Password: anything
-								
-							</td>
-						</tr>
-						<tr class='log' status='info'>
-							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-							<td class='timestamp'>5:35:54 PM</td>
-							<td class='step-details'>
-									URL after login: https://erptest.prog-biz.com/login
-								
-							</td>
-						</tr>
-						<tr class='log' status='pass'>
-							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-							<td class='timestamp'>5:35:54 PM</td>
-							<td class='step-details'>
-									Login failed. Stayed on: https://erptest.prog-biz.com/login
-								
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-		</div>
-	</li>
-	<li class='node level-1 leaf pass' status='pass' test-id='6'>
-		<div class='collapsible-header'>
-			<div class='node-name'>Login Test - Row 5</div>
-			<span class='node-time'>Dec 15, 2025 05:35:54 PM</span>
-			&middot; <span class='node-duration'>0h 0m 5s+201ms</span>
-			<span class='test-status right pass'>pass</span>
-		</div>
-		<div class='collapsible-body'>
-			<div class='node-steps'>
-				<table class='bordered table-results'>
-					<thead>
-						<tr>
-							<th>Status</th>
-							<th>Timestamp</th>
-							<th>Details</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr class='log' status='info'>
-							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-							<td class='timestamp'>5:35:54 PM</td>
-							<td class='step-details'>
-									Company Code: MWTTEST
-								
-							</td>
-						</tr>
-						<tr class='log' status='info'>
-							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-							<td class='timestamp'>5:35:54 PM</td>
-							<td class='step-details'>
-									Username: <script></script>
-								
-							</td>
-						</tr>
-						<tr class='log' status='info'>
-							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-							<td class='timestamp'>5:35:54 PM</td>
-							<td class='step-details'>
-									Password: 123
-								
-							</td>
-						</tr>
-						<tr class='log' status='info'>
-							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-							<td class='timestamp'>5:35:59 PM</td>
-							<td class='step-details'>
-									URL after login: https://erptest.prog-biz.com/login
-								
-							</td>
-						</tr>
-						<tr class='log' status='pass'>
-							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-							<td class='timestamp'>5:35:59 PM</td>
-							<td class='step-details'>
-									Login failed. Stayed on: https://erptest.prog-biz.com/login
-								
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-		</div>
-	</li>
-	<li class='node level-1 leaf pass' status='pass' test-id='7'>
-		<div class='collapsible-header'>
-			<div class='node-name'>Login Test - Row 6</div>
-			<span class='node-time'>Dec 15, 2025 05:35:59 PM</span>
-			&middot; <span class='node-duration'>0h 0m 4s+550ms</span>
-			<span class='test-status right pass'>pass</span>
-		</div>
-		<div class='collapsible-body'>
-			<div class='node-steps'>
-				<table class='bordered table-results'>
-					<thead>
-						<tr>
-							<th>Status</th>
-							<th>Timestamp</th>
-							<th>Details</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr class='log' status='info'>
-							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-							<td class='timestamp'>5:35:59 PM</td>
-							<td class='step-details'>
-									Company Code: MWTTEST
-								
-							</td>
-						</tr>
-						<tr class='log' status='info'>
-							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-							<td class='timestamp'>5:35:59 PM</td>
-							<td class='step-details'>
-									Username: admin
-								
-							</td>
-						</tr>
-						<tr class='log' status='info'>
-							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-							<td class='timestamp'>5:35:59 PM</td>
-							<td class='step-details'>
-									Password: ' OR ''='
-								
-							</td>
-						</tr>
-						<tr class='log' status='info'>
-							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-							<td class='timestamp'>5:36:03 PM</td>
-							<td class='step-details'>
-									URL after login: https://erptest.prog-biz.com/login
-								
-							</td>
-						</tr>
-						<tr class='log' status='pass'>
-							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-							<td class='timestamp'>5:36:03 PM</td>
-							<td class='step-details'>
-									Login failed. Stayed on: https://erptest.prog-biz.com/login
-								
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-		</div>
-	</li>
-	<li class='node level-1 leaf pass' status='pass' test-id='8'>
-		<div class='collapsible-header'>
-			<div class='node-name'>Login Test - Row 7</div>
-			<span class='node-time'>Dec 15, 2025 05:36:03 PM</span>
-			&middot; <span class='node-duration'>0h 0m 4s+583ms</span>
-			<span class='test-status right pass'>pass</span>
-		</div>
-		<div class='collapsible-body'>
-			<div class='node-steps'>
-				<table class='bordered table-results'>
-					<thead>
-						<tr>
-							<th>Status</th>
-							<th>Timestamp</th>
-							<th>Details</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr class='log' status='info'>
-							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-							<td class='timestamp'>5:36:03 PM</td>
-							<td class='step-details'>
-									Company Code: MWTTEST
-								
-							</td>
-						</tr>
-						<tr class='log' status='info'>
-							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-							<td class='timestamp'>5:36:03 PM</td>
-							<td class='step-details'>
-									Username: admin
-								
-							</td>
-						</tr>
-						<tr class='log' status='info'>
-							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-							<td class='timestamp'>5:36:03 PM</td>
-							<td class='step-details'>
-									Password: <script></script>
-								
-							</td>
-						</tr>
-						<tr class='log' status='info'>
-							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-							<td class='timestamp'>5:36:08 PM</td>
-							<td class='step-details'>
-									URL after login: https://erptest.prog-biz.com/login
-								
-							</td>
-						</tr>
-						<tr class='log' status='pass'>
-							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-							<td class='timestamp'>5:36:08 PM</td>
-							<td class='step-details'>
-									Login failed. Stayed on: https://erptest.prog-biz.com/login
-								
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-		</div>
-	</li>
-	<li class='node level-1 leaf pass' status='pass' test-id='9'>
-		<div class='collapsible-header'>
-			<div class='node-name'>Login Test - Row 8</div>
-			<span class='node-time'>Dec 15, 2025 05:36:08 PM</span>
-			&middot; <span class='node-duration'>0h 0m 4s+517ms</span>
-			<span class='test-status right pass'>pass</span>
-		</div>
-		<div class='collapsible-body'>
-			<div class='node-steps'>
-				<table class='bordered table-results'>
-					<thead>
-						<tr>
-							<th>Status</th>
-							<th>Timestamp</th>
-							<th>Details</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr class='log' status='info'>
-							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-							<td class='timestamp'>5:36:08 PM</td>
-							<td class='step-details'>
-									Company Code: MWTTEST
-								
-							</td>
-						</tr>
-						<tr class='log' status='info'>
-							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-							<td class='timestamp'>5:36:08 PM</td>
-							<td class='step-details'>
-									Username:
-								
-							</td>
-						</tr>
-						<tr class='log' status='info'>
-							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-							<td class='timestamp'>5:36:08 PM</td>
-							<td class='step-details'>
-									Password: 123
-								
-							</td>
-						</tr>
-						<tr class='log' status='info'>
-							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-							<td class='timestamp'>5:36:12 PM</td>
-							<td class='step-details'>
-									URL after login: https://erptest.prog-biz.com/login
-								
-							</td>
-						</tr>
-						<tr class='log' status='pass'>
-							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-							<td class='timestamp'>5:36:12 PM</td>
-							<td class='step-details'>
-									Login failed. Stayed on: https://erptest.prog-biz.com/login
-								
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-		</div>
-	</li>
-	<li class='node level-1 leaf pass' status='pass' test-id='10'>
-		<div class='collapsible-header'>
-			<div class='node-name'>Login Test - Row 9</div>
-			<span class='node-time'>Dec 15, 2025 05:36:12 PM</span>
-			&middot; <span class='node-duration'>0h 0m 4s+571ms</span>
-			<span class='test-status right pass'>pass</span>
-		</div>
-		<div class='collapsible-body'>
-			<div class='node-steps'>
-				<table class='bordered table-results'>
-					<thead>
-						<tr>
-							<th>Status</th>
-							<th>Timestamp</th>
-							<th>Details</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr class='log' status='info'>
-							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-							<td class='timestamp'>5:36:12 PM</td>
-							<td class='step-details'>
-									Company Code: MWTTEST
-								
-							</td>
-						</tr>
-						<tr class='log' status='info'>
-							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-							<td class='timestamp'>5:36:12 PM</td>
-							<td class='step-details'>
-									Username: admin
-								
-							</td>
-						</tr>
-						<tr class='log' status='info'>
-							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-							<td class='timestamp'>5:36:12 PM</td>
-							<td class='step-details'>
-									Password:
-								
-							</td>
-						</tr>
-						<tr class='log' status='info'>
-							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-							<td class='timestamp'>5:36:17 PM</td>
-							<td class='step-details'>
-									URL after login: https://erptest.prog-biz.com/login
-								
-							</td>
-						</tr>
-						<tr class='log' status='pass'>
-							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-							<td class='timestamp'>5:36:17 PM</td>
-							<td class='step-details'>
-									Login failed. Stayed on: https://erptest.prog-biz.com/login
-								
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-		</div>
-	</li>
-	<li class='node level-1 leaf pass' status='pass' test-id='11'>
-		<div class='collapsible-header'>
-			<div class='node-name'>Login Test - Row 10</div>
-			<span class='node-time'>Dec 15, 2025 05:36:17 PM</span>
-			&middot; <span class='node-duration'>0h 0m 4s+680ms</span>
-			<span class='test-status right pass'>pass</span>
-		</div>
-		<div class='collapsible-body'>
-			<div class='node-steps'>
-				<table class='bordered table-results'>
-					<thead>
-						<tr>
-							<th>Status</th>
-							<th>Timestamp</th>
-							<th>Details</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr class='log' status='info'>
-							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-							<td class='timestamp'>5:36:17 PM</td>
-							<td class='step-details'>
-									Company Code: Sample
-								
-							</td>
-						</tr>
-						<tr class='log' status='info'>
-							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-							<td class='timestamp'>5:36:17 PM</td>
-							<td class='step-details'>
-									Username: admin
-								
-							</td>
-						</tr>
-						<tr class='log' status='info'>
-							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-							<td class='timestamp'>5:36:17 PM</td>
-							<td class='step-details'>
-									Password: 123
-								
-							</td>
-						</tr>
-						<tr class='log' status='info'>
-							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-							<td class='timestamp'>5:36:22 PM</td>
-							<td class='step-details'>
-									URL after login: https://erptest.prog-biz.com/login
-								
-							</td>
-						</tr>
-						<tr class='log' status='pass'>
-							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-							<td class='timestamp'>5:36:22 PM</td>
-							<td class='step-details'>
-									Login failed. Stayed on: https://erptest.prog-biz.com/login
-								
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-		</div>
-	</li>
-	<li class='node level-1 leaf pass' status='pass' test-id='12'>
-		<div class='collapsible-header'>
-			<div class='node-name'>Login Test - Row 11</div>
-			<span class='node-time'>Dec 15, 2025 05:36:22 PM</span>
-			&middot; <span class='node-duration'>0h 0m 4s+514ms</span>
-			<span class='test-status right pass'>pass</span>
-		</div>
-		<div class='collapsible-body'>
-			<div class='node-steps'>
-				<table class='bordered table-results'>
-					<thead>
-						<tr>
-							<th>Status</th>
-							<th>Timestamp</th>
-							<th>Details</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr class='log' status='info'>
-							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-							<td class='timestamp'>5:36:22 PM</td>
-							<td class='step-details'>
-									Company Code: MWTTEST
-								
-							</td>
-						</tr>
-						<tr class='log' status='info'>
-							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-							<td class='timestamp'>5:36:22 PM</td>
-							<td class='step-details'>
-									Username:
-								
-							</td>
-						</tr>
-						<tr class='log' status='info'>
-							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-							<td class='timestamp'>5:36:22 PM</td>
-							<td class='step-details'>
-									Password: 123
-								
-							</td>
-						</tr>
-						<tr class='log' status='info'>
-							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-							<td class='timestamp'>5:36:26 PM</td>
-							<td class='step-details'>
-									URL after login: https://erptest.prog-biz.com/login
-								
-							</td>
-						</tr>
-						<tr class='log' status='pass'>
-							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-							<td class='timestamp'>5:36:26 PM</td>
-							<td class='step-details'>
-									Login failed. Stayed on: https://erptest.prog-biz.com/login
-								
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-		</div>
-	</li>
-	<li class='node level-1 leaf pass' status='pass' test-id='13'>
-		<div class='collapsible-header'>
-			<div class='node-name'>Login Test - Row 12</div>
-			<span class='node-time'>Dec 15, 2025 05:36:26 PM</span>
-			&middot; <span class='node-duration'>0h 0m 4s+651ms</span>
-			<span class='test-status right pass'>pass</span>
-		</div>
-		<div class='collapsible-body'>
-			<div class='node-steps'>
-				<table class='bordered table-results'>
-					<thead>
-						<tr>
-							<th>Status</th>
-							<th>Timestamp</th>
-							<th>Details</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr class='log' status='info'>
-							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-							<td class='timestamp'>5:36:26 PM</td>
-							<td class='step-details'>
-									Company Code: MWTTEST
-								
-							</td>
-						</tr>
-						<tr class='log' status='info'>
-							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-							<td class='timestamp'>5:36:26 PM</td>
-							<td class='step-details'>
-									Username: admin
-								
-							</td>
-						</tr>
-						<tr class='log' status='info'>
-							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-							<td class='timestamp'>5:36:26 PM</td>
-							<td class='step-details'>
-									Password:
-								
-							</td>
-						</tr>
-						<tr class='log' status='info'>
-							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-							<td class='timestamp'>5:36:31 PM</td>
-							<td class='step-details'>
-									URL after login: https://erptest.prog-biz.com/login
-								
-							</td>
-						</tr>
-						<tr class='log' status='pass'>
-							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-							<td class='timestamp'>5:36:31 PM</td>
-							<td class='step-details'>
-									Login failed. Stayed on: https://erptest.prog-biz.com/login
-								
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-		</div>
-	</li>
-	<li class='node level-1 leaf pass' status='pass' test-id='14'>
-		<div class='collapsible-header'>
-			<div class='node-name'>Login Test - Row 13</div>
-			<span class='node-time'>Dec 15, 2025 05:36:31 PM</span>
-			&middot; <span class='node-duration'>0h 0m 4s+529ms</span>
-			<span class='test-status right pass'>pass</span>
-		</div>
-		<div class='collapsible-body'>
-			<div class='node-steps'>
-				<table class='bordered table-results'>
-					<thead>
-						<tr>
-							<th>Status</th>
-							<th>Timestamp</th>
-							<th>Details</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr class='log' status='info'>
-							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-							<td class='timestamp'>5:36:31 PM</td>
-							<td class='step-details'>
-									Company Code: MWTTEST
-								
-							</td>
-						</tr>
-						<tr class='log' status='info'>
-							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-							<td class='timestamp'>5:36:31 PM</td>
-							<td class='step-details'>
-									Username: admin<script></script>
-								
-							</td>
-						</tr>
-						<tr class='log' status='info'>
-							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-							<td class='timestamp'>5:36:31 PM</td>
-							<td class='step-details'>
-									Password: 123
-								
-							</td>
-						</tr>
-						<tr class='log' status='info'>
-							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-							<td class='timestamp'>5:36:35 PM</td>
-							<td class='step-details'>
-									URL after login: https://erptest.prog-biz.com/login
-								
-							</td>
-						</tr>
-						<tr class='log' status='pass'>
-							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-							<td class='timestamp'>5:36:35 PM</td>
-							<td class='step-details'>
-									Login failed. Stayed on: https://erptest.prog-biz.com/login
-								
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-		</div>
-	</li>
-	<li class='node level-1 leaf pass' status='pass' test-id='15'>
-		<div class='collapsible-header'>
-			<div class='node-name'>Login Test - Row 14</div>
-			<span class='node-time'>Dec 15, 2025 05:36:35 PM</span>
-			&middot; <span class='node-duration'>0h 0m 4s+620ms</span>
-			<span class='test-status right pass'>pass</span>
-		</div>
-		<div class='collapsible-body'>
-			<div class='node-steps'>
-				<table class='bordered table-results'>
-					<thead>
-						<tr>
-							<th>Status</th>
-							<th>Timestamp</th>
-							<th>Details</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr class='log' status='info'>
-							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-							<td class='timestamp'>5:36:35 PM</td>
-							<td class='step-details'>
-									Company Code: MWTTEST
-								
-							</td>
-						</tr>
-						<tr class='log' status='info'>
-							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-							<td class='timestamp'>5:36:35 PM</td>
-							<td class='step-details'>
-									Username: "; DROP TABLE users; --
-								
-							</td>
-						</tr>
-						<tr class='log' status='info'>
-							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-							<td class='timestamp'>5:36:35 PM</td>
-							<td class='step-details'>
-									Password: 123
-								
-							</td>
-						</tr>
-						<tr class='log' status='info'>
-							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-							<td class='timestamp'>5:36:40 PM</td>
-							<td class='step-details'>
-									URL after login: https://erptest.prog-biz.com/login
-								
-							</td>
-						</tr>
-						<tr class='log' status='pass'>
-							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-							<td class='timestamp'>5:36:40 PM</td>
-							<td class='step-details'>
-									Login failed. Stayed on: https://erptest.prog-biz.com/login
-								
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-		</div>
-	</li>
-	<li class='node level-1 leaf pass' status='pass' test-id='16'>
-		<div class='collapsible-header'>
-			<div class='node-name'>Login Test - Row 15</div>
-			<span class='node-time'>Dec 15, 2025 05:36:40 PM</span>
-			&middot; <span class='node-duration'>0h 0m 4s+662ms</span>
-			<span class='test-status right pass'>pass</span>
-		</div>
-		<div class='collapsible-body'>
-			<div class='node-steps'>
-				<table class='bordered table-results'>
-					<thead>
-						<tr>
-							<th>Status</th>
-							<th>Timestamp</th>
-							<th>Details</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr class='log' status='info'>
-							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-							<td class='timestamp'>5:36:40 PM</td>
-							<td class='step-details'>
-									Company Code: MWTTEST
-								
-							</td>
-						</tr>
-						<tr class='log' status='info'>
-							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-							<td class='timestamp'>5:36:40 PM</td>
-							<td class='step-details'>
-									Username: user@domain.com
-								
-							</td>
-						</tr>
-						<tr class='log' status='info'>
-							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-							<td class='timestamp'>5:36:40 PM</td>
-							<td class='step-details'>
-									Password: short
-								
-							</td>
-						</tr>
-						<tr class='log' status='info'>
-							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-							<td class='timestamp'>5:36:45 PM</td>
-							<td class='step-details'>
-									URL after login: https://erptest.prog-biz.com/login
-								
-							</td>
-						</tr>
-						<tr class='log' status='pass'>
-							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-							<td class='timestamp'>5:36:45 PM</td>
-							<td class='step-details'>
-									Login failed. Stayed on: https://erptest.prog-biz.com/login
-								
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-		</div>
-	</li>
-	<li class='node level-1 leaf pass' status='pass' test-id='17'>
-		<div class='collapsible-header'>
-			<div class='node-name'>Login Test - Row 16</div>
-			<span class='node-time'>Dec 15, 2025 05:36:45 PM</span>
-			&middot; <span class='node-duration'>0h 0m 4s+690ms</span>
-			<span class='test-status right pass'>pass</span>
-		</div>
-		<div class='collapsible-body'>
-			<div class='node-steps'>
-				<table class='bordered table-results'>
-					<thead>
-						<tr>
-							<th>Status</th>
-							<th>Timestamp</th>
-							<th>Details</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr class='log' status='info'>
-							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-							<td class='timestamp'>5:36:45 PM</td>
-							<td class='step-details'>
-									Company Code: MWTTEST
-								
-							</td>
-						</tr>
-						<tr class='log' status='info'>
-							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-							<td class='timestamp'>5:36:45 PM</td>
-							<td class='step-details'>
-									Username: admin12345678901234567890
-								
-							</td>
-						</tr>
-						<tr class='log' status='info'>
-							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-							<td class='timestamp'>5:36:45 PM</td>
-							<td class='step-details'>
-									Password: 123
-								
-							</td>
-						</tr>
-						<tr class='log' status='info'>
-							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-							<td class='timestamp'>5:36:49 PM</td>
-							<td class='step-details'>
-									URL after login: https://erptest.prog-biz.com/login
-								
-							</td>
-						</tr>
-						<tr class='log' status='pass'>
-							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-							<td class='timestamp'>5:36:49 PM</td>
-							<td class='step-details'>
-									Login failed. Stayed on: https://erptest.prog-biz.com/login
-								
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-		</div>
-	</li>
-	<li class='node level-1 leaf pass' status='pass' test-id='18'>
-		<div class='collapsible-header'>
-			<div class='node-name'>Login Test - Row 17</div>
-			<span class='node-time'>Dec 15, 2025 05:36:49 PM</span>
-			&middot; <span class='node-duration'>0h 0m 4s+727ms</span>
-			<span class='test-status right pass'>pass</span>
-		</div>
-		<div class='collapsible-body'>
-			<div class='node-steps'>
-				<table class='bordered table-results'>
-					<thead>
-						<tr>
-							<th>Status</th>
-							<th>Timestamp</th>
-							<th>Details</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr class='log' status='info'>
-							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-							<td class='timestamp'>5:36:49 PM</td>
-							<td class='step-details'>
-									Company Code: MWTTEST
-								
-							</td>
-						</tr>
-						<tr class='log' status='info'>
-							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-							<td class='timestamp'>5:36:49 PM</td>
-							<td class='step-details'>
-									Username: admin
-								
-							</td>
-						</tr>
-						<tr class='log' status='info'>
-							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-							<td class='timestamp'>5:36:49 PM</td>
-							<td class='step-details'>
-									Password: 12345678901234567890
-								
-							</td>
-						</tr>
-						<tr class='log' status='info'>
-							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-							<td class='timestamp'>5:36:54 PM</td>
-							<td class='step-details'>
-									URL after login: https://erptest.prog-biz.com/login
-								
-							</td>
-						</tr>
-						<tr class='log' status='pass'>
-							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-							<td class='timestamp'>5:36:54 PM</td>
-							<td class='step-details'>
-									Login failed. Stayed on: https://erptest.prog-biz.com/login
-								
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-		</div>
-	</li>
-	<li class='node level-1 leaf pass' status='pass' test-id='19'>
-		<div class='collapsible-header'>
-			<div class='node-name'>Login Test - Row 18</div>
-			<span class='node-time'>Dec 15, 2025 05:36:54 PM</span>
-			&middot; <span class='node-duration'>0h 0m 4s+598ms</span>
-			<span class='test-status right pass'>pass</span>
-		</div>
-		<div class='collapsible-body'>
-			<div class='node-steps'>
-				<table class='bordered table-results'>
-					<thead>
-						<tr>
-							<th>Status</th>
-							<th>Timestamp</th>
-							<th>Details</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr class='log' status='info'>
-							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-							<td class='timestamp'>5:36:54 PM</td>
-							<td class='step-details'>
-									Company Code: MWTTEST
-								
-							</td>
-						</tr>
-						<tr class='log' status='info'>
-							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-							<td class='timestamp'>5:36:54 PM</td>
-							<td class='step-details'>
-									Username: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-								
-							</td>
-						</tr>
-						<tr class='log' status='info'>
-							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-							<td class='timestamp'>5:36:54 PM</td>
-							<td class='step-details'>
-									Password: 123
-								
-							</td>
-						</tr>
-						<tr class='log' status='info'>
-							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-							<td class='timestamp'>5:36:59 PM</td>
-							<td class='step-details'>
-									URL after login: https://erptest.prog-biz.com/login
-								
-							</td>
-						</tr>
-						<tr class='log' status='pass'>
-							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-							<td class='timestamp'>5:36:59 PM</td>
-							<td class='step-details'>
-									Login failed. Stayed on: https://erptest.prog-biz.com/login
-								
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-		</div>
-	</li>
-</ul>
-					</div>
-				</li>
-				<li class='test displayed active  pass' status='pass' bdd='false' test-id='20'>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>Login with valid credentials</span>
-						<span class='test-time'>Dec 15, 2025 05:36:59 PM</span>
+						<span class='test-time'>Dec 17, 2025 12:26:33 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Dec 15, 2025 05:36:59 PM</span>
-	<span class='label end-time'>Dec 15, 2025 05:37:06 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 7s+75ms</span>
+	<span class='label start-time'>Dec 17, 2025 12:26:33 PM</span>
+	<span class='label end-time'>Dec 17, 2025 12:26:41 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 7s+754ms</span>
 </div>
 <div class='test-steps'>
 	<table class='bordered table-results'>
@@ -1311,7 +149,7 @@
 		<tbody>
 			<tr class='log' status='pass'>
 				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>5:37:02 PM</td>
+				<td class='timestamp'>12:26:37 PM</td>
 				<td class='step-details'>
 						Company code : MWTTEST
 					
@@ -1319,7 +157,7 @@
 			</tr>
 			<tr class='log' status='pass'>
 				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>5:37:02 PM</td>
+				<td class='timestamp'>12:26:37 PM</td>
 				<td class='step-details'>
 						Username : Admin
 					
@@ -1327,7 +165,7 @@
 			</tr>
 			<tr class='log' status='pass'>
 				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>5:37:02 PM</td>
+				<td class='timestamp'>12:26:37 PM</td>
 				<td class='step-details'>
 						Password : 123
 					
@@ -1335,7 +173,7 @@
 			</tr>
 			<tr class='log' status='pass'>
 				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>5:37:06 PM</td>
+				<td class='timestamp'>12:26:41 PM</td>
 				<td class='step-details'>
 						Login successful — redirected to dashboard
 					
@@ -1343,7 +181,7 @@
 			</tr>
 			<tr class='log' status='pass'>
 				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>5:37:06 PM</td>
+				<td class='timestamp'>12:26:41 PM</td>
 				<td class='step-details'>
 						Test case passed: login_test
 					
@@ -1357,17 +195,17 @@
 						</ul>
 					</div>
 				</li>
-				<li class='test displayed active  pass' status='pass' bdd='false' test-id='21'>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='2'>
 					<div class='test-heading'>
 						<span class='test-name'>Create enquiry</span>
-						<span class='test-time'>Dec 15, 2025 05:37:06 PM</span>
+						<span class='test-time'>Dec 17, 2025 12:26:41 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Dec 15, 2025 05:37:06 PM</span>
-	<span class='label end-time'>Dec 15, 2025 05:37:24 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 17s+883ms</span>
+	<span class='label start-time'>Dec 17, 2025 12:26:41 PM</span>
+	<span class='label end-time'>Dec 17, 2025 12:26:59 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 17s+666ms</span>
 </div>
 <div class='test-steps'>
 	<table class='bordered table-results'>
@@ -1381,7 +219,7 @@
 		<tbody>
 			<tr class='log' status='pass'>
 				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>5:37:16 PM</td>
+				<td class='timestamp'>12:26:51 PM</td>
 				<td class='step-details'>
 						Customer phone number entered
 					
@@ -1389,7 +227,7 @@
 			</tr>
 			<tr class='log' status='pass'>
 				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>5:37:16 PM</td>
+				<td class='timestamp'>12:26:51 PM</td>
 				<td class='step-details'>
 						Customer name entered
 					
@@ -1397,7 +235,7 @@
 			</tr>
 			<tr class='log' status='pass'>
 				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>5:37:16 PM</td>
+				<td class='timestamp'>12:26:51 PM</td>
 				<td class='step-details'>
 						Billing address field found and value passed.
 					
@@ -1405,7 +243,7 @@
 			</tr>
 			<tr class='log' status='pass'>
 				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>5:37:17 PM</td>
+				<td class='timestamp'>12:26:52 PM</td>
 				<td class='step-details'>
 						Lead quality field found and value passed
 					
@@ -1413,7 +251,7 @@
 			</tr>
 			<tr class='log' status='pass'>
 				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>5:37:17 PM</td>
+				<td class='timestamp'>12:26:52 PM</td>
 				<td class='step-details'>
 						Lead source feidl found and value passed
 					
@@ -1421,7 +259,7 @@
 			</tr>
 			<tr class='log' status='info'>
 				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-				<td class='timestamp'>5:37:17 PM</td>
+				<td class='timestamp'>12:26:52 PM</td>
 				<td class='step-details'>
 						Auto-assignee is enabled. Assignee options are not present.
 					
@@ -1429,7 +267,7 @@
 			</tr>
 			<tr class='log' status='pass'>
 				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>5:37:20 PM</td>
+				<td class='timestamp'>12:26:55 PM</td>
 				<td class='step-details'>
 						Enquired for selected
 					
@@ -1437,7 +275,7 @@
 			</tr>
 			<tr class='log' status='pass'>
 				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>5:37:20 PM</td>
+				<td class='timestamp'>12:26:55 PM</td>
 				<td class='step-details'>
 						Remarks field found and value passed
 					
@@ -1445,7 +283,7 @@
 			</tr>
 			<tr class='log' status='pass'>
 				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>5:37:24 PM</td>
+				<td class='timestamp'>12:26:59 PM</td>
 				<td class='step-details'>
 						Quantity field found and value passed
 					
@@ -1453,7 +291,7 @@
 			</tr>
 			<tr class='log' status='info'>
 				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-				<td class='timestamp'>5:37:24 PM</td>
+				<td class='timestamp'>12:26:59 PM</td>
 				<td class='step-details'>
 						Item description field is not present
 					
@@ -1461,7 +299,7 @@
 			</tr>
 			<tr class='log' status='pass'>
 				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>5:37:24 PM</td>
+				<td class='timestamp'>12:26:59 PM</td>
 				<td class='step-details'>
 						Enquiry save button clicked
 					
@@ -1469,7 +307,7 @@
 			</tr>
 			<tr class='log' status='pass'>
 				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>5:37:24 PM</td>
+				<td class='timestamp'>12:26:59 PM</td>
 				<td class='step-details'>
 						Test case passed: enquiry_create
 					
@@ -1483,17 +321,17 @@
 						</ul>
 					</div>
 				</li>
-				<li class='test displayed active  pass' status='pass' bdd='false' test-id='22'>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='3'>
 					<div class='test-heading'>
 						<span class='test-name'>Enquiry overview</span>
-						<span class='test-time'>Dec 15, 2025 05:37:24 PM</span>
+						<span class='test-time'>Dec 17, 2025 12:26:59 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Dec 15, 2025 05:37:24 PM</span>
-	<span class='label end-time'>Dec 15, 2025 05:37:33 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 8s+578ms</span>
+	<span class='label start-time'>Dec 17, 2025 12:26:59 PM</span>
+	<span class='label end-time'>Dec 17, 2025 12:27:07 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 8s+510ms</span>
 </div>
 <div class='test-steps'>
 	<table class='bordered table-results'>
@@ -1507,7 +345,7 @@
 		<tbody>
 			<tr class='log' status='pass'>
 				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>5:37:33 PM</td>
+				<td class='timestamp'>12:27:07 PM</td>
 				<td class='step-details'>
 						Test case passed: enquiry_overview
 					
@@ -1521,55 +359,17 @@
 						</ul>
 					</div>
 				</li>
-				<li class='test displayed active  pass' status='pass' bdd='false' test-id='23'>
-					<div class='test-heading'>
-						<span class='test-name'>Edit enquiry</span>
-						<span class='test-time'>Dec 15, 2025 05:37:33 PM</span>
-						<span class='test-status right pass'>pass</span>
-					</div>
-					<div class='test-content hide'>
-<div class='test-time-info'>
-	<span class='label start-time'>Dec 15, 2025 05:37:33 PM</span>
-	<span class='label end-time'>Dec 15, 2025 05:37:41 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 8s+512ms</span>
-</div>
-<div class='test-steps'>
-	<table class='bordered table-results'>
-		<thead>
-			<tr>
-				<th>Status</th>
-				<th>Timestamp</th>
-				<th>Details</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr class='log' status='pass'>
-				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>5:37:41 PM</td>
-				<td class='step-details'>
-						Test case passed: edit_enquiry
-					
-				</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-						<ul class='screenshots'>
-							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='Screenshot/edit_enquiry.png' src='Screenshot/edit_enquiry.png' data-src='Screenshot/edit_enquiry.png'></li>
-						</ul>
-					</div>
-				</li>
-				<li class='test displayed active  pass' status='pass' bdd='false' test-id='24'>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='4'>
 					<div class='test-heading'>
 						<span class='test-name'>Enquiry followup from the enquiry overview</span>
-						<span class='test-time'>Dec 15, 2025 05:37:42 PM</span>
+						<span class='test-time'>Dec 17, 2025 12:27:08 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Dec 15, 2025 05:37:42 PM</span>
-	<span class='label end-time'>Dec 15, 2025 05:37:55 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 13s+263ms</span>
+	<span class='label start-time'>Dec 17, 2025 12:27:08 PM</span>
+	<span class='label end-time'>Dec 17, 2025 12:27:17 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 8s+956ms</span>
 </div>
 <div class='test-steps'>
 	<table class='bordered table-results'>
@@ -1583,7 +383,7 @@
 		<tbody>
 			<tr class='log' status='pass'>
 				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>5:37:55 PM</td>
+				<td class='timestamp'>12:27:17 PM</td>
 				<td class='step-details'>
 						Test case passed: followup_from_enquiry_overiew
 					
@@ -1597,17 +397,17 @@
 						</ul>
 					</div>
 				</li>
-				<li class='test displayed active  pass' status='pass' bdd='false' test-id='25'>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='5'>
 					<div class='test-heading'>
 						<span class='test-name'>Edit and delete a followup</span>
-						<span class='test-time'>Dec 15, 2025 05:37:55 PM</span>
-						<span class='test-status right pass'>pass</span>
+						<span class='test-time'>Dec 17, 2025 12:27:17 PM</span>
+						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Dec 15, 2025 05:37:55 PM</span>
-	<span class='label end-time'>Dec 15, 2025 05:38:02 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 7s+57ms</span>
+	<span class='label start-time'>Dec 17, 2025 12:27:17 PM</span>
+	<span class='label end-time'>Dec 17, 2025 12:27:24 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 6s+901ms</span>
 </div>
 <div class='test-steps'>
 	<table class='bordered table-results'>
@@ -1619,11 +419,74 @@
 			</tr>
 		</thead>
 		<tbody>
-			<tr class='log' status='pass'>
-				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>5:38:02 PM</td>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>12:27:24 PM</td>
 				<td class='step-details'>
-						Test case passed: followup_details
+						Test case failed: followup_details
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>12:27:24 PM</td>
+				<td class='step-details'>
+						<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[20]/div/div[3]/button[1]"}
+  (Session info: chrome=143.0.7499.41)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4c5594564a82436e45c3d9dacda31e2b, findElement {using=xpath, value=/html/body/div[20]/div/div[3]/button[1]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.41, chrome: {chromedriverVersion: 143.0.7499.146 (c1224fc40c9..., userDataDir: C:\Users\amalr\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57787}, goog:processID: 15940, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57787/devtoo..., se:cdpVersion: 143.0.7499.41, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4c5594564a82436e45c3d9dacda31e2b
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at pages.Enquiry.followup_edit_delete(Enquiry.java:496)
+	at test.ERP_Test.followup_details(ERP_Test.java:126)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea>
 					
 				</td>
 			</tr>
@@ -1635,17 +498,17 @@
 						</ul>
 					</div>
 				</li>
-				<li class='test displayed active  pass' status='pass' bdd='false' test-id='26'>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='6'>
 					<div class='test-heading'>
 						<span class='test-name'>Make enquiry hot</span>
-						<span class='test-time'>Dec 15, 2025 05:38:02 PM</span>
-						<span class='test-status right pass'>pass</span>
+						<span class='test-time'>Dec 17, 2025 12:27:24 PM</span>
+						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Dec 15, 2025 05:38:02 PM</span>
-	<span class='label end-time'>Dec 15, 2025 05:38:13 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 10s+749ms</span>
+	<span class='label start-time'>Dec 17, 2025 12:27:24 PM</span>
+	<span class='label end-time'>Dec 17, 2025 12:27:27 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 3s+131ms</span>
 </div>
 <div class='test-steps'>
 	<table class='bordered table-results'>
@@ -1657,19 +520,72 @@
 			</tr>
 		</thead>
 		<tbody>
-			<tr class='log' status='pass'>
-				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>5:38:13 PM</td>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>12:27:27 PM</td>
 				<td class='step-details'>
-						The quotation page opens
+						Test case failed: enquiry_hot
 					
 				</td>
 			</tr>
-			<tr class='log' status='pass'>
-				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>5:38:13 PM</td>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>12:27:27 PM</td>
 				<td class='step-details'>
-						Test case passed: enquiry_hot
+						<textarea disabled class="code-block">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <button type="button" class="btn btn-sm btn-secondary me-1">...</button> is not clickable at point (1133, 196). Other element would receive the click: <div class="swal2-container swal2-center swal2-backdrop-show" style="overflow-y: auto;">...</div>
+  (Session info: chrome=143.0.7499.41)
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4c5594564a82436e45c3d9dacda31e2b, clickElement {id=f.6E4B4C422B024300F4D520ADD14F778F.d.C01E97AC285838000FA08D821DDCB0B2.e.616}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.41, chrome: {chromedriverVersion: 143.0.7499.146 (c1224fc40c9..., userDataDir: C:\Users\amalr\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57787}, goog:processID: 15940, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57787/devtoo..., se:cdpVersion: 143.0.7499.41, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (4c5594564a82436e45c3d9dacda31e2b)] -> xpath: //button[@class='btn btn-sm btn-secondary me-1']]
+Session ID: 4c5594564a82436e45c3d9dacda31e2b
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at pages.Enquiry.enquiry_hot_followup(Enquiry.java:532)
+	at test.ERP_Test.enquiry_hot(ERP_Test.java:143)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea>
 					
 				</td>
 			</tr>
@@ -1681,17 +597,17 @@
 						</ul>
 					</div>
 				</li>
-				<li class='test displayed active  pass' status='pass' bdd='false' test-id='27'>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='7'>
 					<div class='test-heading'>
 						<span class='test-name'>Quotation Test</span>
-						<span class='test-time'>Dec 15, 2025 05:38:13 PM</span>
-						<span class='test-status right pass'>pass</span>
+						<span class='test-time'>Dec 17, 2025 12:27:27 PM</span>
+						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Dec 15, 2025 05:38:13 PM</span>
-	<span class='label end-time'>Dec 15, 2025 05:38:19 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 5s+752ms</span>
+	<span class='label start-time'>Dec 17, 2025 12:27:27 PM</span>
+	<span class='label end-time'>Dec 17, 2025 12:27:37 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 10s+70ms</span>
 </div>
 <div class='test-steps'>
 	<table class='bordered table-results'>
@@ -1703,35 +619,57 @@
 			</tr>
 		</thead>
 		<tbody>
-			<tr class='log' status='pass'>
-				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>5:38:14 PM</td>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>12:27:37 PM</td>
 				<td class='step-details'>
-						Quotation no : QUO-58
+						Test case failed: quotation
 					
 				</td>
 			</tr>
-			<tr class='log' status='info'>
-				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-				<td class='timestamp'>5:38:16 PM</td>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>12:27:37 PM</td>
 				<td class='step-details'>
-						Description already entered : remarks Test
-					
-				</td>
-			</tr>
-			<tr class='log' status='pass'>
-				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>5:38:19 PM</td>
-				<td class='step-details'>
-						Quotation created successfully
-					
-				</td>
-			</tr>
-			<tr class='log' status='pass'>
-				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>5:38:19 PM</td>
-				<td class='step-details'>
-						Test case passed: quotation
+						<textarea disabled class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.id: expdate (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.41, chrome: {chromedriverVersion: 143.0.7499.146 (c1224fc40c9..., userDataDir: C:\Users\amalr\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57787}, goog:processID: 15940, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57787/devtoo..., se:cdpVersion: 143.0.7499.41, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4c5594564a82436e45c3d9dacda31e2b
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at pages.Quotation.quotation(Quotation.java:65)
+	at test.ERP_Test.quotation(ERP_Test.java:151)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea>
 					
 				</td>
 			</tr>
@@ -1743,17 +681,17 @@
 						</ul>
 					</div>
 				</li>
-				<li class='test displayed active  pass' status='pass' bdd='false' test-id='28'>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='8'>
 					<div class='test-heading'>
 						<span class='test-name'>Edit Quotation</span>
-						<span class='test-time'>Dec 15, 2025 05:38:19 PM</span>
-						<span class='test-status right pass'>pass</span>
+						<span class='test-time'>Dec 17, 2025 12:27:37 PM</span>
+						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Dec 15, 2025 05:38:19 PM</span>
-	<span class='label end-time'>Dec 15, 2025 05:38:23 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 3s+888ms</span>
+	<span class='label start-time'>Dec 17, 2025 12:27:37 PM</span>
+	<span class='label end-time'>Dec 17, 2025 12:27:39 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 1s+123ms</span>
 </div>
 <div class='test-steps'>
 	<table class='bordered table-results'>
@@ -1765,19 +703,72 @@
 			</tr>
 		</thead>
 		<tbody>
-			<tr class='log' status='pass'>
-				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>5:38:23 PM</td>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>12:27:39 PM</td>
 				<td class='step-details'>
-						Quotation edited successfully
+						Test case failed: edit_quotation
 					
 				</td>
 			</tr>
-			<tr class='log' status='pass'>
-				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>5:38:23 PM</td>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>12:27:39 PM</td>
 				<td class='step-details'>
-						Test case passed: edit_quotation
+						<textarea disabled class="code-block">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <button type="button" class="btn btn-secondary-light btn-wave me-0 waves-effect waves-light">...</button> is not clickable at point (1434, 118). Other element would receive the click: <div class="swal2-container swal2-center swal2-backdrop-show" style="overflow-y: auto;">...</div>
+  (Session info: chrome=143.0.7499.41)
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4c5594564a82436e45c3d9dacda31e2b, clickElement {id=f.6E4B4C422B024300F4D520ADD14F778F.d.C01E97AC285838000FA08D821DDCB0B2.e.734}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.41, chrome: {chromedriverVersion: 143.0.7499.146 (c1224fc40c9..., userDataDir: C:\Users\amalr\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57787}, goog:processID: 15940, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57787/devtoo..., se:cdpVersion: 143.0.7499.41, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (4c5594564a82436e45c3d9dacda31e2b)] -> xpath: /html/body/div[1]/div[1]/div[1]/div/div[1]/div[2]/button[2]]
+Session ID: 4c5594564a82436e45c3d9dacda31e2b
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at pages.Quotation.edit_quotation(Quotation.java:181)
+	at test.ERP_Test.edit_quotation(ERP_Test.java:159)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea>
 					
 				</td>
 			</tr>
@@ -1789,17 +780,17 @@
 						</ul>
 					</div>
 				</li>
-				<li class='test displayed active  pass' status='pass' bdd='false' test-id='29'>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='9'>
 					<div class='test-heading'>
 						<span class='test-name'>View Quotation</span>
-						<span class='test-time'>Dec 15, 2025 05:38:23 PM</span>
-						<span class='test-status right pass'>pass</span>
+						<span class='test-time'>Dec 17, 2025 12:27:39 PM</span>
+						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Dec 15, 2025 05:38:23 PM</span>
-	<span class='label end-time'>Dec 15, 2025 05:38:30 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 6s+950ms</span>
+	<span class='label start-time'>Dec 17, 2025 12:27:39 PM</span>
+	<span class='label end-time'>Dec 17, 2025 12:27:49 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 10s+51ms</span>
 </div>
 <div class='test-steps'>
 	<table class='bordered table-results'>
@@ -1811,11 +802,57 @@
 			</tr>
 		</thead>
 		<tbody>
-			<tr class='log' status='pass'>
-				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>5:38:30 PM</td>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>12:27:49 PM</td>
 				<td class='step-details'>
-						Test case passed: view_quotation
+						Test case failed: view_quotation
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>12:27:49 PM</td>
+				<td class='step-details'>
+						<textarea disabled class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //a[.//i[contains(@class,'ri-eye-line')]] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.41, chrome: {chromedriverVersion: 143.0.7499.146 (c1224fc40c9..., userDataDir: C:\Users\amalr\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57787}, goog:processID: 15940, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57787/devtoo..., se:cdpVersion: 143.0.7499.41, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4c5594564a82436e45c3d9dacda31e2b
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at pages.Quotation.view_quotation(Quotation.java:196)
+	at test.ERP_Test.view_quotation(ERP_Test.java:167)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea>
 					
 				</td>
 			</tr>
@@ -1827,17 +864,17 @@
 						</ul>
 					</div>
 				</li>
-				<li class='test displayed active  pass' status='pass' bdd='false' test-id='30'>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='10'>
 					<div class='test-heading'>
 						<span class='test-name'>Quotation Followup</span>
-						<span class='test-time'>Dec 15, 2025 05:38:31 PM</span>
-						<span class='test-status right pass'>pass</span>
+						<span class='test-time'>Dec 17, 2025 12:27:49 PM</span>
+						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Dec 15, 2025 05:38:31 PM</span>
-	<span class='label end-time'>Dec 15, 2025 05:38:36 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 4s+737ms</span>
+	<span class='label start-time'>Dec 17, 2025 12:27:49 PM</span>
+	<span class='label end-time'>Dec 17, 2025 12:27:59 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 10s+91ms</span>
 </div>
 <div class='test-steps'>
 	<table class='bordered table-results'>
@@ -1849,19 +886,57 @@
 			</tr>
 		</thead>
 		<tbody>
-			<tr class='log' status='pass'>
-				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>5:38:36 PM</td>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>12:27:59 PM</td>
 				<td class='step-details'>
-						Quotation followup saved successfully
+						Test case failed: quotation_followup
 					
 				</td>
 			</tr>
-			<tr class='log' status='pass'>
-				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>5:38:36 PM</td>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>12:27:59 PM</td>
 				<td class='step-details'>
-						Test case passed: quotation_followup
+						<textarea disabled class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //button[contains(., 'Followup') and .//i[contains(@class,'ri-printer-line')]] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.41, chrome: {chromedriverVersion: 143.0.7499.146 (c1224fc40c9..., userDataDir: C:\Users\amalr\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57787}, goog:processID: 15940, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57787/devtoo..., se:cdpVersion: 143.0.7499.41, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4c5594564a82436e45c3d9dacda31e2b
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at pages.Quotation.quotation_followup(Quotation.java:232)
+	at test.ERP_Test.quotation_followup(ERP_Test.java:175)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea>
 					
 				</td>
 			</tr>
@@ -1893,7 +968,414 @@
 	</div>
 	<!-- subview right -->
 </div>
-<!-- test view --><!-- category view --><!-- exception view --><div id='dashboard-view' class='view hide'>
+<!-- test view --><!-- category view --><div id='exception-view' class='view hide'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='exception-collection' class='exception-collection'>
+				<li class='exception displayed active'>
+					<div class='exception-heading'>
+						<span class='exception-name'>org.openqa.selenium.NoSuchElementException</span>
+						<span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
+					</div>
+					<div class='exception-content hide'>
+						<div class='exception-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Dec 17, 2025 12:27:17 PM</td>
+										<td class='linked' test-id='5'>Edit and delete a followup</td>
+										<td>
+											<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[20]/div/div[3]/button[1]"}
+  (Session info: chrome=143.0.7499.41)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4c5594564a82436e45c3d9dacda31e2b, findElement {using=xpath, value=/html/body/div[20]/div/div[3]/button[1]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.41, chrome: {chromedriverVersion: 143.0.7499.146 (c1224fc40c9..., userDataDir: C:\Users\amalr\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57787}, goog:processID: 15940, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57787/devtoo..., se:cdpVersion: 143.0.7499.41, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4c5594564a82436e45c3d9dacda31e2b
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at pages.Enquiry.followup_edit_delete(Enquiry.java:496)
+	at test.ERP_Test.followup_details(ERP_Test.java:126)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='exception displayed active'>
+					<div class='exception-heading'>
+						<span class='exception-name'>org.openqa.selenium.ElementClickInterceptedException</span>
+						<span class='exception-count right'><span class='label red lighten-1 white-text'>2</span></span>
+					</div>
+					<div class='exception-content hide'>
+						<div class='exception-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Dec 17, 2025 12:27:24 PM</td>
+										<td class='linked' test-id='6'>Make enquiry hot</td>
+										<td>
+											<textarea disabled class="code-block">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <button type="button" class="btn btn-sm btn-secondary me-1">...</button> is not clickable at point (1133, 196). Other element would receive the click: <div class="swal2-container swal2-center swal2-backdrop-show" style="overflow-y: auto;">...</div>
+  (Session info: chrome=143.0.7499.41)
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4c5594564a82436e45c3d9dacda31e2b, clickElement {id=f.6E4B4C422B024300F4D520ADD14F778F.d.C01E97AC285838000FA08D821DDCB0B2.e.616}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.41, chrome: {chromedriverVersion: 143.0.7499.146 (c1224fc40c9..., userDataDir: C:\Users\amalr\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57787}, goog:processID: 15940, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57787/devtoo..., se:cdpVersion: 143.0.7499.41, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (4c5594564a82436e45c3d9dacda31e2b)] -> xpath: //button[@class='btn btn-sm btn-secondary me-1']]
+Session ID: 4c5594564a82436e45c3d9dacda31e2b
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at pages.Enquiry.enquiry_hot_followup(Enquiry.java:532)
+	at test.ERP_Test.enquiry_hot(ERP_Test.java:143)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea>
+										</td>
+									</tr>
+									<tr>
+										<td>Dec 17, 2025 12:27:37 PM</td>
+										<td class='linked' test-id='8'>Edit Quotation</td>
+										<td>
+											<textarea disabled class="code-block">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <button type="button" class="btn btn-secondary-light btn-wave me-0 waves-effect waves-light">...</button> is not clickable at point (1434, 118). Other element would receive the click: <div class="swal2-container swal2-center swal2-backdrop-show" style="overflow-y: auto;">...</div>
+  (Session info: chrome=143.0.7499.41)
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4c5594564a82436e45c3d9dacda31e2b, clickElement {id=f.6E4B4C422B024300F4D520ADD14F778F.d.C01E97AC285838000FA08D821DDCB0B2.e.734}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.41, chrome: {chromedriverVersion: 143.0.7499.146 (c1224fc40c9..., userDataDir: C:\Users\amalr\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57787}, goog:processID: 15940, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57787/devtoo..., se:cdpVersion: 143.0.7499.41, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (4c5594564a82436e45c3d9dacda31e2b)] -> xpath: /html/body/div[1]/div[1]/div[1]/div/div[1]/div[2]/button[2]]
+Session ID: 4c5594564a82436e45c3d9dacda31e2b
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at pages.Quotation.edit_quotation(Quotation.java:181)
+	at test.ERP_Test.edit_quotation(ERP_Test.java:159)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='exception displayed active'>
+					<div class='exception-heading'>
+						<span class='exception-name'>org.openqa.selenium.TimeoutException</span>
+						<span class='exception-count right'><span class='label red lighten-1 white-text'>3</span></span>
+					</div>
+					<div class='exception-content hide'>
+						<div class='exception-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Dec 17, 2025 12:27:27 PM</td>
+										<td class='linked' test-id='7'>Quotation Test</td>
+										<td>
+											<textarea disabled class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.id: expdate (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.41, chrome: {chromedriverVersion: 143.0.7499.146 (c1224fc40c9..., userDataDir: C:\Users\amalr\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57787}, goog:processID: 15940, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57787/devtoo..., se:cdpVersion: 143.0.7499.41, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4c5594564a82436e45c3d9dacda31e2b
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at pages.Quotation.quotation(Quotation.java:65)
+	at test.ERP_Test.quotation(ERP_Test.java:151)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea>
+										</td>
+									</tr>
+									<tr>
+										<td>Dec 17, 2025 12:27:39 PM</td>
+										<td class='linked' test-id='9'>View Quotation</td>
+										<td>
+											<textarea disabled class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //a[.//i[contains(@class,'ri-eye-line')]] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.41, chrome: {chromedriverVersion: 143.0.7499.146 (c1224fc40c9..., userDataDir: C:\Users\amalr\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57787}, goog:processID: 15940, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57787/devtoo..., se:cdpVersion: 143.0.7499.41, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4c5594564a82436e45c3d9dacda31e2b
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at pages.Quotation.view_quotation(Quotation.java:196)
+	at test.ERP_Test.view_quotation(ERP_Test.java:167)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea>
+										</td>
+									</tr>
+									<tr>
+										<td>Dec 17, 2025 12:27:49 PM</td>
+										<td class='linked' test-id='10'>Quotation Followup</td>
+										<td>
+											<textarea disabled class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //button[contains(., 'Followup') and .//i[contains(@class,'ri-printer-line')]] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.41, chrome: {chromedriverVersion: 143.0.7499.146 (c1224fc40c9..., userDataDir: C:\Users\amalr\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57787}, goog:processID: 15940, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57787/devtoo..., se:cdpVersion: 143.0.7499.41, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4c5594564a82436e45c3d9dacda31e2b
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at pages.Quotation.quotation_followup(Quotation.java:232)
+	at test.ERP_Test.quotation_followup(ERP_Test.java:175)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='exception-name'></h5>
+		</div>
+	</div>
+</div>
+<!-- exception view --><div id='dashboard-view' class='view hide'>
 	<div class='card-panel transparent np-v'>
 		<h5>Dashboard</h5>
 
@@ -1901,31 +1383,31 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Tests
-					<div class='panel-lead'>12</div>
+					<div class='panel-lead'>10</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>18</div>
+					<div class='panel-lead'>0</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Dec 15, 2025 05:35:18 PM</div>
+					<div class='panel-lead'>Dec 17, 2025 12:26:29 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Dec 15, 2025 05:38:36 PM</div>
+			 		<div class='panel-lead'>Dec 17, 2025 12:27:59 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 3m 17s+544ms</div>
+					<div class='panel-lead'>0h 1m 30s+195ms</div>
 				</div>
 			</div>
 			<div class='col s4'>
@@ -1968,16 +1450,16 @@
 		<!-- container -->
 		<script>
 			var statusGroup = {
-                parentCount: 12,
-				passParent: 12,
-				failParent: 0,
+                parentCount: 10,
+				passParent: 4,
+				failParent: 6,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
-				exceptionsParent: 0,
-				childCount: 18,
-				passChild: 18,
+				exceptionsParent: 6,
+				childCount: 0,
+				passChild: 0,
 				failChild: 0,
 				fatalChild: 0,
 				errorChild: 0,
@@ -2000,7 +1482,7 @@
 		</script>
 		<script>
 			var timeline = {
-			        "Data Driven testing":92.439,"Login with valid credentials":7.075,"Create enquiry":17.883,"Enquiry overview":8.578,"Edit enquiry":8.512,"Enquiry followup from the enquiry overview":13.263,"Edit and delete a followup":7.057,"Make enquiry hot":10.749,"Quotation Test":5.752,"Edit Quotation":3.888,"View Quotation":6.95,"Quotation Followup":4.737
+			        "Login with valid credentials":7.754,"Create enquiry":17.666,"Enquiry overview":8.51,"Enquiry followup from the enquiry overview":8.956,"Edit and delete a followup":6.901,"Make enquiry hot":3.131,"Quotation Test":10.07,"Edit Quotation":1.123,"View Quotation":10.051,"Quotation Followup":10.091
 			};
 		</script>
 		<script src='https://cdn.rawgit.com/extent-framework/extent-github-cdn/b65cd69/v3html/js/extent.js' type='text/javascript'></script>

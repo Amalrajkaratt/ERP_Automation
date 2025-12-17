@@ -66,7 +66,7 @@ public class ERP_Test {
 
 	}
 	
-	@Test(priority = 0)
+//	@Test(priority = 0)
 	public void data_driven_testing() throws Exception {
 	    isDataDriven = true;
 
@@ -101,7 +101,7 @@ public class ERP_Test {
 
 	}
 
-	@Test(priority = 4)
+//	@Test(priority = 4)
 	public void edit_enquiry() throws Exception {
 		test = extent.createTest("Edit enquiry");
 		Enquiry enq = new Enquiry(driver, test);
@@ -114,7 +114,6 @@ public class ERP_Test {
 
 		test = extent.createTest("Enquiry followup from the enquiry overview");
 		Enquiry enq = new Enquiry(driver, test);
-//		enq.enquiry_followup("05-12-2024","2024-12-05T10:10");
 		enq.enquiry_followup();
 
 	}

@@ -6,6 +6,8 @@ import java.awt.Toolkit;
 import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.DataFlavor;
 import java.time.Duration;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -264,7 +266,8 @@ public class Enquiry {
 	public void enquiry_overview() throws Exception {
 		
 
-		
+// Starting enquiry searching
+
 		Thread.sleep(2000);
 		WebElement Enq_table=driver.findElement(enquiries_table);
 		 WebElement Enquiries=driver.findElement(leads);
@@ -357,8 +360,14 @@ public class Enquiry {
 	}
 	
 	public void enquiry_followup() throws Exception {
-	    Thread.sleep(6000);
+	    Thread.sleep(2000);
+		String currentUrl = driver.getCurrentUrl();
+		String expectedPart = "/enquiry-overview/";
 
+		if (currentUrl.contains(expectedPart)) {
+			System.out.println("Already on the enqiry overview page");
+		}
+		else {
 	    List<WebElement> rows = driver.findElement(enquiries_table).findElements(By.tagName("tr"));
 	    String valueToFind = enq_no;
 	    boolean enquiryFound = false;
@@ -386,7 +395,8 @@ public class Enquiry {
 	        System.out.println("Enquiry not found: " + valueToFind);
 	        return; // Exit the method if enquiry is not found
 	    }
-
+		}
+//End of enquiry searching
 	    System.out.println("Waiting for the Followup button to click");
 	    Thread.sleep(2000);
 	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
@@ -404,11 +414,33 @@ public class Enquiry {
 	    sel.selectByIndex(1);
 	    driver.findElement(followup_desc).sendKeys("Followup desc");
 
-//	    Thread.sleep(2000);
-//	    driver.findElement(next_followup_date).clear();
-//	    Thread.sleep(2000);
-//	    JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
-//	    jsExecutor.executeScript("document.getElementById('gross-total').value = arguments[0]", Next_Flup_dt);
+	    WebElement dateTimeField = driver.findElement(next_followup_date);
+
+	 // Read min value
+	 String minValue = dateTimeField.getAttribute("min");
+
+	 // Parse min time
+	 LocalDateTime minTime = LocalDateTime.parse(minValue);
+
+	 // Add 2 minutes
+	 LocalDateTime finalTime = minTime.plusMinutes(2);
+
+	 // Correct formatter
+	 DateTimeFormatter formatter =
+	         DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm");
+
+	 String valueToSet = finalTime.format(formatter);
+
+	 // Set value using JS and trigger events
+	 JavascriptExecutor js = (JavascriptExecutor) driver;
+	 js.executeScript(
+	         "arguments[0].value = arguments[1];" +
+	         "arguments[0].dispatchEvent(new Event('input', { bubbles: true }));" +
+	         "arguments[0].dispatchEvent(new Event('change', { bubbles: true }));",
+	         dateTimeField,
+	         valueToSet
+	 );
+
 
 	    Thread.sleep(2000);
 	    driver.findElement(followup_save).click();
@@ -421,8 +453,35 @@ public class Enquiry {
 		wait.until(ExpectedConditions.elementToBeClickable(followup_details)).click();
 		Thread.sleep(2000);
 
+
 		wait.until(ExpectedConditions.visibilityOfElementLocated(followup_edit)).click();
 		Thread.sleep(1000);
+	    WebElement dateTimeField = driver.findElement(next_followup_date);
+
+	 // Read min value
+	 String minValue = dateTimeField.getAttribute("min");
+
+	 // Parse min time
+	 LocalDateTime minTime = LocalDateTime.parse(minValue);
+
+	 // Add 2 minutes
+	 LocalDateTime finalTime = minTime.plusMinutes(2);
+
+	 // Correct formatter
+	 DateTimeFormatter formatter =
+	         DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm");
+
+	 String valueToSet = finalTime.format(formatter);
+
+	 // Set value using JS and trigger events
+	 JavascriptExecutor js = (JavascriptExecutor) driver;
+	 js.executeScript(
+	         "arguments[0].value = arguments[1];" +
+	         "arguments[0].dispatchEvent(new Event('input', { bubbles: true }));" +
+	         "arguments[0].dispatchEvent(new Event('change', { bubbles: true }));",
+	         dateTimeField,
+	         valueToSet
+	 );
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(followup_edit_save_btn)).click();
 		Thread.sleep(1000);
@@ -476,6 +535,33 @@ public class Enquiry {
 	    Select sel = new Select(driver.findElement(followup_status));
 	    sel.selectByVisibleText("Hot (Hot)");
 	    driver.findElement(followup_desc).sendKeys("Hot lead");
+	    WebElement dateTimeField = driver.findElement(next_followup_date);
+
+	 // Read min value
+	 String minValue = dateTimeField.getAttribute("min");
+
+	 // Parse min time
+	 LocalDateTime minTime = LocalDateTime.parse(minValue);
+
+	 // Add 2 minutes
+	 LocalDateTime finalTime = minTime.plusMinutes(2);
+
+	 // Correct formatter
+	 DateTimeFormatter formatter =
+	         DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm");
+
+	 String valueToSet = finalTime.format(formatter);
+
+	 // Set value using JS and trigger events
+	 JavascriptExecutor js = (JavascriptExecutor) driver;
+	 js.executeScript(
+	         "arguments[0].value = arguments[1];" +
+	         "arguments[0].dispatchEvent(new Event('input', { bubbles: true }));" +
+	         "arguments[0].dispatchEvent(new Event('change', { bubbles: true }));",
+	         dateTimeField,
+	         valueToSet
+	 );
+
 
 	    Thread.sleep(2000);
 	    Actions act=new Actions(driver);

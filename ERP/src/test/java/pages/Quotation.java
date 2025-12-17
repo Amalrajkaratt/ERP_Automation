@@ -6,7 +6,6 @@ import java.awt.datatransfer.DataFlavor;
 import java.time.Duration;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -151,17 +150,6 @@ public class Quotation {
 		driver.findElement(rate).clear();
 		driver.findElement(rate).sendKeys("10000");
 		
-		List<WebElement> Subsidy=driver.findElements(subsidy);
-		
-//		if(Subsidy.size()>0)
-//		{
-//			WebElement subsidy_field=Subsidy.get(0);
-//			subsidy_field.sendKeys("78000");
-//			test2.log(Status.PASS, "Subsidy field found and value passed");
-//		}
-//		else {
-//			test2.log(Status.INFO, "The subsidy field is not present");
-//		}
 		
 		js.executeScript("arguments[0].scrollIntoView();", driver.findElement(quotation_save_btn));
 		Actions act1=new Actions(driver);

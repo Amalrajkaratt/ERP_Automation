@@ -1,36 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="12" passed="12" failed="0" skipped="0">
+<testng-results ignored="0" total="10" passed="4" failed="6" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-12-15T17:35:18 IST" name="Default suite" finished-at="2025-12-15T17:38:36 IST" duration-ms="198284">
+  <suite started-at="2025-12-17T12:26:29 IST" name="Default suite" finished-at="2025-12-17T12:28:00 IST" duration-ms="90717">
     <groups>
     </groups>
-    <test started-at="2025-12-15T17:35:18 IST" name="Default test" finished-at="2025-12-15T17:38:36 IST" duration-ms="198284">
+    <test started-at="2025-12-17T12:26:29 IST" name="Default test" finished-at="2025-12-17T12:28:00 IST" duration-ms="90717">
       <class name="test.ERP_Test">
-        <test-method is-config="true" signature="urlloading()[pri:0, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-15T17:35:18 IST" name="urlloading" finished-at="2025-12-15T17:35:23 IST" duration-ms="5204" status="PASS">
+        <test-method is-config="true" signature="urlloading()[pri:0, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-17T12:26:29 IST" name="urlloading" finished-at="2025-12-17T12:26:33 IST" duration-ms="4178" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- urlloading -->
-        <test-method signature="data_driven_testing()[pri:0, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-15T17:35:23 IST" name="data_driven_testing" finished-at="2025-12-15T17:36:59 IST" duration-ms="95317" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- data_driven_testing -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-15T17:36:59 IST" name="afterMethod" finished-at="2025-12-15T17:36:59 IST" duration-ms="8" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=data_driven_testing status=SUCCESS method=ERP_Test.data_driven_testing()[pri:0, instance:test.ERP_Test@6302bbb1] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method signature="login_test()[pri:1, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-15T17:36:59 IST" name="login_test" finished-at="2025-12-15T17:37:06 IST" duration-ms="7071" status="PASS">
+        <test-method signature="login_test()[pri:1, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-17T12:26:33 IST" name="login_test" finished-at="2025-12-17T12:26:41 IST" duration-ms="7757" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login_test -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-15T17:37:06 IST" name="afterMethod" finished-at="2025-12-15T17:37:06 IST" duration-ms="295" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-17T12:26:41 IST" name="afterMethod" finished-at="2025-12-17T12:26:41 IST" duration-ms="191" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -41,11 +26,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method signature="enquiry_create()[pri:2, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-15T17:37:06 IST" name="enquiry_create" finished-at="2025-12-15T17:37:24 IST" duration-ms="17884" status="PASS">
+        <test-method signature="enquiry_create()[pri:2, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-17T12:26:41 IST" name="enquiry_create" finished-at="2025-12-17T12:26:59 IST" duration-ms="17664" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- enquiry_create -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-15T17:37:24 IST" name="afterMethod" finished-at="2025-12-15T17:37:24 IST" duration-ms="186" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-17T12:26:59 IST" name="afterMethod" finished-at="2025-12-17T12:26:59 IST" duration-ms="198" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -56,11 +41,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method signature="enquiry_overview()[pri:3, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-15T17:37:24 IST" name="enquiry_overview" finished-at="2025-12-15T17:37:33 IST" duration-ms="8576" status="PASS">
+        <test-method signature="enquiry_overview()[pri:3, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-17T12:26:59 IST" name="enquiry_overview" finished-at="2025-12-17T12:27:07 IST" duration-ms="8510" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- enquiry_overview -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-15T17:37:33 IST" name="afterMethod" finished-at="2025-12-15T17:37:33 IST" duration-ms="180" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-17T12:27:07 IST" name="afterMethod" finished-at="2025-12-17T12:27:08 IST" duration-ms="216" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -71,26 +56,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method signature="edit_enquiry()[pri:4, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-15T17:37:33 IST" name="edit_enquiry" finished-at="2025-12-15T17:37:41 IST" duration-ms="8512" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- edit_enquiry -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-15T17:37:41 IST" name="afterMethod" finished-at="2025-12-15T17:37:42 IST" duration-ms="194" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=edit_enquiry status=SUCCESS method=ERP_Test.edit_enquiry()[pri:4, instance:test.ERP_Test@6302bbb1] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method signature="followup_from_enquiry_overiew()[pri:5, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-15T17:37:42 IST" name="followup_from_enquiry_overiew" finished-at="2025-12-15T17:37:55 IST" duration-ms="13261" status="PASS">
+        <test-method signature="followup_from_enquiry_overiew()[pri:5, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-17T12:27:08 IST" name="followup_from_enquiry_overiew" finished-at="2025-12-17T12:27:17 IST" duration-ms="8952" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- followup_from_enquiry_overiew -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-15T17:37:55 IST" name="afterMethod" finished-at="2025-12-15T17:37:55 IST" duration-ms="206" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-17T12:27:17 IST" name="afterMethod" finished-at="2025-12-17T12:27:17 IST" duration-ms="196" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -101,97 +71,459 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method signature="followup_details()[pri:6, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-15T17:37:55 IST" name="followup_details" finished-at="2025-12-15T17:38:02 IST" duration-ms="7054" status="PASS">
+        <test-method signature="followup_details()[pri:6, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-17T12:27:17 IST" name="followup_details" finished-at="2025-12-17T12:27:24 IST" duration-ms="6893" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[20]/div/div[3]/button[1]"}
+  (Session info: chrome=143.0.7499.41)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4c5594564a82436e45c3d9dacda31e2b, findElement {using=xpath, value=/html/body/div[20]/div/div[3]/button[1]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.41, chrome: {chromedriverVersion: 143.0.7499.146 (c1224fc40c9..., userDataDir: C:\Users\amalr\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57787}, goog:processID: 15940, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57787/devtoo..., se:cdpVersion: 143.0.7499.41, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4c5594564a82436e45c3d9dacda31e2b]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[20]/div/div[3]/button[1]"}
+  (Session info: chrome=143.0.7499.41)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4c5594564a82436e45c3d9dacda31e2b, findElement {using=xpath, value=/html/body/div[20]/div/div[3]/button[1]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.41, chrome: {chromedriverVersion: 143.0.7499.146 (c1224fc40c9..., userDataDir: C:\Users\amalr\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57787}, goog:processID: 15940, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57787/devtoo..., se:cdpVersion: 143.0.7499.41, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4c5594564a82436e45c3d9dacda31e2b
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+at pages.Enquiry.followup_edit_delete(Enquiry.java:496)
+at test.ERP_Test.followup_details(ERP_Test.java:126)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- followup_details -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-15T17:38:02 IST" name="afterMethod" finished-at="2025-12-15T17:38:02 IST" duration-ms="218" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-17T12:27:24 IST" name="afterMethod" finished-at="2025-12-17T12:27:24 IST" duration-ms="174" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=followup_details status=SUCCESS method=ERP_Test.followup_details()[pri:6, instance:test.ERP_Test@6302bbb1] output={null}]]]>
+                <![CDATA[[TestResult name=followup_details status=FAILURE method=ERP_Test.followup_details()[pri:6, instance:test.ERP_Test@6302bbb1] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method signature="enquiry_hot()[pri:8, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-15T17:38:02 IST" name="enquiry_hot" finished-at="2025-12-15T17:38:13 IST" duration-ms="10744" status="PASS">
+        <test-method signature="enquiry_hot()[pri:8, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-17T12:27:24 IST" name="enquiry_hot" finished-at="2025-12-17T12:27:27 IST" duration-ms="3127" status="FAIL">
+          <exception class="org.openqa.selenium.ElementClickInterceptedException">
+            <message>
+              <![CDATA[element click intercepted: Element <button type="button" class="btn btn-sm btn-secondary me-1">...</button> is not clickable at point (1133, 196). Other element would receive the click: <div class="swal2-container swal2-center swal2-backdrop-show" style="overflow-y: auto;">...</div>
+  (Session info: chrome=143.0.7499.41)
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4c5594564a82436e45c3d9dacda31e2b, clickElement {id=f.6E4B4C422B024300F4D520ADD14F778F.d.C01E97AC285838000FA08D821DDCB0B2.e.616}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.41, chrome: {chromedriverVersion: 143.0.7499.146 (c1224fc40c9..., userDataDir: C:\Users\amalr\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57787}, goog:processID: 15940, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57787/devtoo..., se:cdpVersion: 143.0.7499.41, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (4c5594564a82436e45c3d9dacda31e2b)] -> xpath: //button[@class='btn btn-sm btn-secondary me-1']]
+Session ID: 4c5594564a82436e45c3d9dacda31e2b]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <button type="button" class="btn btn-sm btn-secondary me-1">...</button> is not clickable at point (1133, 196). Other element would receive the click: <div class="swal2-container swal2-center swal2-backdrop-show" style="overflow-y: auto;">...</div>
+  (Session info: chrome=143.0.7499.41)
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4c5594564a82436e45c3d9dacda31e2b, clickElement {id=f.6E4B4C422B024300F4D520ADD14F778F.d.C01E97AC285838000FA08D821DDCB0B2.e.616}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.41, chrome: {chromedriverVersion: 143.0.7499.146 (c1224fc40c9..., userDataDir: C:\Users\amalr\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57787}, goog:processID: 15940, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57787/devtoo..., se:cdpVersion: 143.0.7499.41, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (4c5594564a82436e45c3d9dacda31e2b)] -> xpath: //button[@class='btn btn-sm btn-secondary me-1']]
+Session ID: 4c5594564a82436e45c3d9dacda31e2b
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+at pages.Enquiry.enquiry_hot_followup(Enquiry.java:532)
+at test.ERP_Test.enquiry_hot(ERP_Test.java:143)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- enquiry_hot -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-15T17:38:13 IST" name="afterMethod" finished-at="2025-12-15T17:38:13 IST" duration-ms="204" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-17T12:27:27 IST" name="afterMethod" finished-at="2025-12-17T12:27:27 IST" duration-ms="168" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=enquiry_hot status=SUCCESS method=ERP_Test.enquiry_hot()[pri:8, instance:test.ERP_Test@6302bbb1] output={null}]]]>
+                <![CDATA[[TestResult name=enquiry_hot status=FAILURE method=ERP_Test.enquiry_hot()[pri:8, instance:test.ERP_Test@6302bbb1] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method signature="quotation()[pri:9, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-15T17:38:13 IST" name="quotation" finished-at="2025-12-15T17:38:19 IST" duration-ms="5751" status="PASS">
+        <test-method signature="quotation()[pri:9, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-17T12:27:27 IST" name="quotation" finished-at="2025-12-17T12:27:37 IST" duration-ms="10068" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for element to be clickable: By.id: expdate (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.41, chrome: {chromedriverVersion: 143.0.7499.146 (c1224fc40c9..., userDataDir: C:\Users\amalr\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57787}, goog:processID: 15940, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57787/devtoo..., se:cdpVersion: 143.0.7499.41, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4c5594564a82436e45c3d9dacda31e2b]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.id: expdate (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.41, chrome: {chromedriverVersion: 143.0.7499.146 (c1224fc40c9..., userDataDir: C:\Users\amalr\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57787}, goog:processID: 15940, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57787/devtoo..., se:cdpVersion: 143.0.7499.41, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4c5594564a82436e45c3d9dacda31e2b
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at pages.Quotation.quotation(Quotation.java:65)
+at test.ERP_Test.quotation(ERP_Test.java:151)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quotation -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-15T17:38:19 IST" name="afterMethod" finished-at="2025-12-15T17:38:19 IST" duration-ms="200" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-17T12:27:37 IST" name="afterMethod" finished-at="2025-12-17T12:27:37 IST" duration-ms="170" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=quotation status=SUCCESS method=ERP_Test.quotation()[pri:9, instance:test.ERP_Test@6302bbb1] output={null}]]]>
+                <![CDATA[[TestResult name=quotation status=FAILURE method=ERP_Test.quotation()[pri:9, instance:test.ERP_Test@6302bbb1] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method signature="edit_quotation()[pri:10, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-15T17:38:19 IST" name="edit_quotation" finished-at="2025-12-15T17:38:23 IST" duration-ms="3886" status="PASS">
+        <test-method signature="edit_quotation()[pri:10, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-17T12:27:37 IST" name="edit_quotation" finished-at="2025-12-17T12:27:39 IST" duration-ms="1119" status="FAIL">
+          <exception class="org.openqa.selenium.ElementClickInterceptedException">
+            <message>
+              <![CDATA[element click intercepted: Element <button type="button" class="btn btn-secondary-light btn-wave me-0 waves-effect waves-light">...</button> is not clickable at point (1434, 118). Other element would receive the click: <div class="swal2-container swal2-center swal2-backdrop-show" style="overflow-y: auto;">...</div>
+  (Session info: chrome=143.0.7499.41)
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4c5594564a82436e45c3d9dacda31e2b, clickElement {id=f.6E4B4C422B024300F4D520ADD14F778F.d.C01E97AC285838000FA08D821DDCB0B2.e.734}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.41, chrome: {chromedriverVersion: 143.0.7499.146 (c1224fc40c9..., userDataDir: C:\Users\amalr\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57787}, goog:processID: 15940, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57787/devtoo..., se:cdpVersion: 143.0.7499.41, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (4c5594564a82436e45c3d9dacda31e2b)] -> xpath: /html/body/div[1]/div[1]/div[1]/div/div[1]/div[2]/button[2]]
+Session ID: 4c5594564a82436e45c3d9dacda31e2b]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <button type="button" class="btn btn-secondary-light btn-wave me-0 waves-effect waves-light">...</button> is not clickable at point (1434, 118). Other element would receive the click: <div class="swal2-container swal2-center swal2-backdrop-show" style="overflow-y: auto;">...</div>
+  (Session info: chrome=143.0.7499.41)
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4c5594564a82436e45c3d9dacda31e2b, clickElement {id=f.6E4B4C422B024300F4D520ADD14F778F.d.C01E97AC285838000FA08D821DDCB0B2.e.734}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.41, chrome: {chromedriverVersion: 143.0.7499.146 (c1224fc40c9..., userDataDir: C:\Users\amalr\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57787}, goog:processID: 15940, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57787/devtoo..., se:cdpVersion: 143.0.7499.41, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (4c5594564a82436e45c3d9dacda31e2b)] -> xpath: /html/body/div[1]/div[1]/div[1]/div/div[1]/div[2]/button[2]]
+Session ID: 4c5594564a82436e45c3d9dacda31e2b
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+at pages.Quotation.edit_quotation(Quotation.java:181)
+at test.ERP_Test.edit_quotation(ERP_Test.java:159)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- edit_quotation -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-15T17:38:23 IST" name="afterMethod" finished-at="2025-12-15T17:38:23 IST" duration-ms="345" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-17T12:27:39 IST" name="afterMethod" finished-at="2025-12-17T12:27:39 IST" duration-ms="172" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=edit_quotation status=SUCCESS method=ERP_Test.edit_quotation()[pri:10, instance:test.ERP_Test@6302bbb1] output={null}]]]>
+                <![CDATA[[TestResult name=edit_quotation status=FAILURE method=ERP_Test.edit_quotation()[pri:10, instance:test.ERP_Test@6302bbb1] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method signature="view_quotation()[pri:11, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-15T17:38:23 IST" name="view_quotation" finished-at="2025-12-15T17:38:30 IST" duration-ms="6948" status="PASS">
+        <test-method signature="view_quotation()[pri:11, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-17T12:27:39 IST" name="view_quotation" finished-at="2025-12-17T12:27:49 IST" duration-ms="10048" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //a[.//i[contains(@class,'ri-eye-line')]] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.41, chrome: {chromedriverVersion: 143.0.7499.146 (c1224fc40c9..., userDataDir: C:\Users\amalr\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57787}, goog:processID: 15940, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57787/devtoo..., se:cdpVersion: 143.0.7499.41, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4c5594564a82436e45c3d9dacda31e2b]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //a[.//i[contains(@class,'ri-eye-line')]] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.41, chrome: {chromedriverVersion: 143.0.7499.146 (c1224fc40c9..., userDataDir: C:\Users\amalr\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57787}, goog:processID: 15940, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57787/devtoo..., se:cdpVersion: 143.0.7499.41, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4c5594564a82436e45c3d9dacda31e2b
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at pages.Quotation.view_quotation(Quotation.java:196)
+at test.ERP_Test.view_quotation(ERP_Test.java:167)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- view_quotation -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-15T17:38:30 IST" name="afterMethod" finished-at="2025-12-15T17:38:31 IST" duration-ms="359" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-17T12:27:49 IST" name="afterMethod" finished-at="2025-12-17T12:27:49 IST" duration-ms="157" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=view_quotation status=SUCCESS method=ERP_Test.view_quotation()[pri:11, instance:test.ERP_Test@6302bbb1] output={null}]]]>
+                <![CDATA[[TestResult name=view_quotation status=FAILURE method=ERP_Test.view_quotation()[pri:11, instance:test.ERP_Test@6302bbb1] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method signature="quotation_followup()[pri:12, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-15T17:38:31 IST" name="quotation_followup" finished-at="2025-12-15T17:38:36 IST" duration-ms="4735" status="PASS">
+        <test-method signature="quotation_followup()[pri:12, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-17T12:27:49 IST" name="quotation_followup" finished-at="2025-12-17T12:27:59 IST" duration-ms="10087" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //button[contains(., 'Followup') and .//i[contains(@class,'ri-printer-line')]] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.41, chrome: {chromedriverVersion: 143.0.7499.146 (c1224fc40c9..., userDataDir: C:\Users\amalr\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57787}, goog:processID: 15940, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57787/devtoo..., se:cdpVersion: 143.0.7499.41, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4c5594564a82436e45c3d9dacda31e2b]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //button[contains(., 'Followup') and .//i[contains(@class,'ri-printer-line')]] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.41, chrome: {chromedriverVersion: 143.0.7499.146 (c1224fc40c9..., userDataDir: C:\Users\amalr\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57787}, goog:processID: 15940, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57787/devtoo..., se:cdpVersion: 143.0.7499.41, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4c5594564a82436e45c3d9dacda31e2b
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at pages.Quotation.quotation_followup(Quotation.java:232)
+at test.ERP_Test.quotation_followup(ERP_Test.java:175)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quotation_followup -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-15T17:38:36 IST" name="afterMethod" finished-at="2025-12-15T17:38:36 IST" duration-ms="195" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-17T12:27:59 IST" name="afterMethod" finished-at="2025-12-17T12:27:59 IST" duration-ms="165" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=quotation_followup status=SUCCESS method=ERP_Test.quotation_followup()[pri:12, instance:test.ERP_Test@6302bbb1] output={null}]]]>
+                <![CDATA[[TestResult name=quotation_followup status=FAILURE method=ERP_Test.quotation_followup()[pri:12, instance:test.ERP_Test@6302bbb1] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-15T17:38:36 IST" name="teardown" finished-at="2025-12-15T17:38:36 IST" duration-ms="667" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-17T12:27:59 IST" name="teardown" finished-at="2025-12-17T12:28:00 IST" duration-ms="425" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
