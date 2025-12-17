@@ -54,7 +54,9 @@ public class Enquiry {
 	By enquired_for=By.xpath("//*[@id=\"app\"]/div[1]/div/div/div[2]/div/form/div/div[2]/div[6]/div/div/table/tfoot/tr/td[1]/div/div[1]/div/div[1]");
 	By firstRow = By.xpath("//table/tbody/tr[1]");
 	By quantity=By.xpath("//input[@placeholder='Enter quantity']");
-	By description=By.id("item-description");
+	By item_desc_btn = By.xpath("//button[contains(@class,'accordion-button') and contains(normalize-space(),'Add Note')]");
+
+	By description= By.xpath("//textarea[@placeholder='Enter description here']");
 	By enquiry_save_btn=By.xpath("//button[@class='btn btn-primary-light me-2']");
 	By confirm_btn=By.xpath("/html/body/div[9]/div/div[3]/button[1]");
 	By confirm_btn1=By.xpath("/html/body/div[15]/div/div[3]/button[1]");
@@ -74,7 +76,7 @@ public class Enquiry {
 	By followup_edit=By.xpath("//*[@id=\"followups\"]/ul/li/div/div[2]/div/a[1]");
 	By followup_edit_save_btn=By.xpath("//*[@id=\"followupModal\"]/div/div/form/div[3]/button[3]");
 	By followup_delete=By.xpath("//*[@id=\"followups\"]/ul/li/div/div[2]/div/a[2]");
-	By confirm_delete_followup=By.xpath("/html/body/div[20]/div/div[3]/button[1]");
+	By confirm_delete_followup=By.xpath("//button[contains(@class,'swal2-confirm') and normalize-space()='Yes, Delete']");
 	
 	By delete_enquiry=By.xpath("/html/body/div[1]/div[1]/div[1]/div/div[1]/div[2]/button[1]");
 	By confirm_enquiry_delete=By.xpath("/html/body/div[22]/div/div[3]/button[1]");
@@ -125,8 +127,8 @@ public class Enquiry {
 	        if (Place.size()>0) {
 				WebElement field=Place.get(0);
 				field.sendKeys("Kannur");
-				System.out.println("place field is present");
-				tes.log(Status.PASS, "Billing address field found and value passed.");
+				System.out.println("Place field is present");
+				tes.log(Status.PASS, "Place field found and value passed.");
 			}
 	        else {
 	        	tes.log(Status.INFO, "Place field is not present");
@@ -154,7 +156,7 @@ public class Enquiry {
 	        	WebElement field=Lead_source.get(0);
 	        	Select sel=new Select(field);
 	        	sel.selectByIndex(1);
-	        	tes.log(Status.PASS, "Lead source feidl found and value passed");
+	        	tes.log(Status.PASS, "Lead source field found and value passed");
 	        }
 	        else
 	        {
@@ -237,36 +239,55 @@ public class Enquiry {
 	        {
 	        	tes.log(Status.INFO, "Quantiy field is not present");
 	        }
-	        	        
-//	      Item description
-	        
-	        List<WebElement> Item_description = driver.findElements(description);
+	        	        	        
+//Item description test update
+	     // Try to find description field
+	        List<WebElement> descriptionFields = driver.findElements(description);
 
-	        if (Item_description.size() > 0) {
-	            // Field is present
-	            WebElement field = Item_description.get(0);
-	            field.sendKeys("Item description test");
-	            tes.log(Status.PASS, "Item description field found and value passed");
-	        } else {
-	            tes.log(Status.INFO, "Item description field is not present");
+	        if (!descriptionFields.isEmpty() && descriptionFields.get(0).isDisplayed()) {
+
+	            // Case 1: Field already open
+	            descriptionFields.get(0).sendKeys("Item description test");
+	            tes.log(Status.PASS, "Item description field already open. Value entered.");
+
+	        }
+	        else {
+
+	            // Field not open, try to find the button
+	            List<WebElement> itemDescButtons = driver.findElements(item_desc_btn);
+
+	            if (!itemDescButtons.isEmpty() && itemDescButtons.get(0).isDisplayed()) {
+
+	                // Case 2: Button exists → open field
+	                itemDescButtons.get(0).click();
+	                tes.log(Status.INFO, "Item description button clicked.");
+
+	                // Wait for field to appear
+	                WebElement descriptionField = wait.until(
+	                        ExpectedConditions.visibilityOfElementLocated(description)
+	                );
+
+	                descriptionField.sendKeys("Item description test");
+	                tes.log(Status.PASS, "Item description field opened and value entered.");
+
+	            } else {
+
+	                // Case 3: Neither field nor button present
+	                tes.log(Status.INFO, "Item description field and button are not present.");
+	            }
 	        }
 
-	           // Save enquiry
+	        Thread.sleep(2000);
+	        System.out.println("Saving the enquiry");
 	        driver.findElement(enquiry_save_btn).click();
 	        tes.log(Status.PASS, "Enquiry save button clicked");
-	       
-	        
-
-	       
-
-	    
 	}
+
 
 
 	public void enquiry_overview() throws Exception {
 		
 
-// Starting enquiry searching
 
 		Thread.sleep(2000);
 		WebElement Enq_table=driver.findElement(enquiries_table);

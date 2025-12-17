@@ -104,7 +104,7 @@ public class Login {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(company_code)).click();
 		
 		driver.findElement(company_code).sendKeys("MWTTEST");
-		driver.findElement(username).sendKeys("admin");
+		driver.findElement(username).sendKeys("john");
 		driver.findElement(password).sendKeys("123");
 		
 		test1.log(Status.PASS, "Company code : MWTTEST");
