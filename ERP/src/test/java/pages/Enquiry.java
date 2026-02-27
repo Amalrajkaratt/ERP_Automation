@@ -37,24 +37,25 @@ public class Enquiry {
 	By themeToggle = By.xpath("//a[contains(@class,'layout-setting')]");
 	
 //	By crm=By.xpath("/html/body/div[1]/div[1]/aside/div[2]/div[1]/div[2]/div/div/div/nav/ul/li[4]/a");
-	By crm=By.xpath("//span[normalize-space(.)='CRM']/parent::a");
-	By new_enquiry=By.xpath("//a[normalize-space(text())='Create Enquiry']");
+	By crm=By.id("nav-crm");
+	By new_enquiry=By.id("nav-crm-create-enquiry");
 	
-	By enquiry_no=By.xpath("//div[@class='input-group']//input[@id='enquiry-phone']");
-	By customer_phone=By.xpath("//div[@class='input-group mt-1']//input[@id='enquiry-phone']");
+	By branchSelect = By.id("nav-master-branch");
+	By enquiry_no=By.id("enquiry-number");
+	By customer_phone=By.id("customer-phone");
 	By customer_name=By.id("TxtCustomer");
 	By place=By.id("Place");
-	By lead_quality=By.id("enquiry-quality");
+	By lead_quality=By.id("lead-quality");
 	By lead_source=By.id("leadsource");
-	By next_followup=By.id("gross-total");
 	By assign_to=By.id("assignto");
-	By multiple_assigne=By.xpath("//input[@placeholder='Select enquiry assignee']");
+	By multiple_assignee=By.id("assign-to-multiselect");
 	By firstLi = By.xpath("//label[normalize-space()='You']/preceding-sibling::input[@type='checkbox']");
-	By remarks=By.id("enquiry-description-text-area");
-	By enquired_for=By.xpath("//*[@id=\"app\"]/div[1]/div/div/div[2]/div/form/div/div[2]/div[6]/div/div/table/tfoot/tr/td[1]/div/div[1]/div/div[1]");
-	By firstRow = By.xpath("//table/tbody/tr[1]");
-	By quantity=By.xpath("//input[@placeholder='Enter quantity']");
-	By item_desc_btn = By.xpath("//button[contains(@class,'accordion-button') and contains(normalize-space(),'Add Note')]");
+	By done = By.xpath("//*[@id=\"app\"]/div[1]/div/div/div[2]/div/form/div/div[2]/div[3]/div/div[1]/div/div/input");
+	By remarks=By.id("enquiry-description");
+	By enquired_for=By.xpath("//*[@id=\"app\"]/div[1]/div/div/div[2]/div/form/div/div[2]/div[7]/div/div/table/tfoot/tr/td[1]/div/div[1]/div/div[1]");
+	By firstRow = By.id("popup-item-row-0");
+	By quantity=By.id("new-item-quantity");
+	By item_desc_btn = By.id("new-item-description");
 
 	By description= By.xpath("//textarea[@placeholder='Enter description here']");
 	By enquiry_save_btn=By.xpath("//button[@class='btn btn-primary-light me-2']");
@@ -68,12 +69,12 @@ public class Enquiry {
 	By enquiry_followup_btn=By.xpath("//button[@class='btn btn-sm btn-secondary me-1']");
 	By enquiry_followup_date=By.id("followup-date");
 	By followup_status=By.xpath("//*[@id=\"followupModal\"]/div/div/form/div[2]/div[3]/div/select");
-	By followup_desc=By.id("short-description");
-	By next_followup_date=By.id("gross-total");
-	By followup_save=By.xpath("//*[@id=\"followupModal\"]/div/div/form/div[3]/button[2]");
+	By followup_desc=By.id("followup-description");
+	By next_followup_date=By.id("next-followup-date");
+	By followup_save=By.id("btn-save-followup");
 	
 	By followup_details=By.id("followups-tab");
-	By followup_edit=By.xpath("//*[@id=\"followups\"]/ul/li/div/div[2]/div/a[1]");
+	By followup_edit=By.xpath("//a[normalize-space()='Edit']");
 	By followup_edit_save_btn=By.xpath("//*[@id=\"followupModal\"]/div/div/form/div[3]/button[3]");
 	By followup_delete=By.xpath("//*[@id=\"followups\"]/ul/li/div/div[2]/div/a[2]");
 	By confirm_delete_followup=By.xpath("//button[contains(@class,'swal2-confirm') and normalize-space()='Yes, Delete']");
@@ -100,6 +101,26 @@ public class Enquiry {
 	        wait.until(ExpectedConditions.visibilityOfElementLocated(new_enquiry)).click();
 	        Thread.sleep(6000);
 	        
+	        
+	        List<WebElement> branches = driver.findElements(branchSelect);
+
+	        if (!branches.isEmpty() && branches.get(0).isDisplayed()) {
+
+	        	Select branchDropdown = new Select(branches.get(0));
+
+	        	long actualOptions = branchDropdown.getOptions()
+	        	        .stream()
+	        	        .filter(WebElement::isEnabled)
+	        	        .count();
+
+	        	System.out.println("Actual branch options (excluding Choose): " + actualOptions);
+	        	tes.log(Status.INFO,
+	        	        "Actual branch options (excluding Choose): " + actualOptions);
+
+	        } else {
+	            System.out.println("Branch selection dropdown not present for this user");
+	            tes.log(Status.INFO, "Branch selection dropdown not present for this user");
+	        }
 //	        Fetching the enquiry number
 	        
 	        WebElement Enquiry_no=driver.findElement(enquiry_no);
@@ -140,7 +161,7 @@ public class Enquiry {
 	        {
 	        	WebElement field=Lead_quality.get(0);
                 Select sel = new Select(field);
-                sel.selectByVisibleText("40%");
+                sel.selectByVisibleText("COLD");
                 tes.log(Status.PASS, "Lead quality field found and value passed");
 	        }
 	        else {
@@ -175,12 +196,14 @@ public class Enquiry {
 
 	        } else {
 	            // Try multiple assignee
-	            List<WebElement> multipleAssignees = driver.findElements(multiple_assigne);
+	            List<WebElement> multipleAssignees = driver.findElements(multiple_assignee);
 
 	            if (multipleAssignees.size() > 0) {
 	                // Case 2: Multiple Assignee Option
-	                wait.until(ExpectedConditions.elementToBeClickable(multiple_assigne)).click();
+	                wait.until(ExpectedConditions.elementToBeClickable(multiple_assignee)).click();
 	                wait.until(ExpectedConditions.elementToBeClickable(firstLi)).click();
+	                Thread.sleep(2000);
+	                driver.findElement(done).click();
 	                System.out.println("Multiple assignee available");
 	                tes.log(Status.PASS, "Multiple assignee selected");
 
@@ -192,12 +215,40 @@ public class Enquiry {
 	        }
 
 
-	        
+	        Thread.sleep(1000);
+//	        WebElement Next_followup_Date = driver.findElement(next_followup_date);
+//	        Next_followup_Date.sendKeys("28-02-2026",Keys.TAB,"04:00:PM");
 	
+		    WebElement dateTimeField = driver.findElement(next_followup_date);
+
+			 // Read min value
+			 String minValue = dateTimeField.getAttribute("min");
+
+			 // Parse min time
+			 LocalDateTime minTime = LocalDateTime.parse(minValue);
+
+			 // Add 2 minutes
+			 LocalDateTime finalTime = minTime.plusMinutes(2);
+
+			 // Correct formatter
+			 DateTimeFormatter formatter =
+			         DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm");
+
+			 String valueToSet = finalTime.format(formatter);
+
+			 // Set value using JS and trigger events
+			 JavascriptExecutor js = (JavascriptExecutor) driver;
+			 js.executeScript(
+			         "arguments[0].value = arguments[1];" +
+			         "arguments[0].dispatchEvent(new Event('input', { bubbles: true }));" +
+			         "arguments[0].dispatchEvent(new Event('change', { bubbles: true }));",
+			         dateTimeField,
+			         valueToSet
+			 );
 
 	        // Scroll down
-	        JavascriptExecutor js = (JavascriptExecutor) driver;
-	        js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
+	        JavascriptExecutor js1 = (JavascriptExecutor) driver;
+	        js1.executeScript("window.scrollBy(0,document.body.scrollHeight)");
 
 
 //		      Enquired for
@@ -429,10 +480,20 @@ public class Enquiry {
 	    System.out.println("The followup button is clicked");
 
 	    Thread.sleep(2000);
-//	    driver.findElement(enquiry_followup_date).clear();
-//	    driver.findElement(enquiry_followup_date).sendKeys(today);
 	    Select sel = new Select(driver.findElement(followup_status));
 	    sel.selectByIndex(1);
+	    
+	    Thread.sleep(1000);
+	    List<WebElement> Lead_Quality = driver.findElements(lead_quality);
+		if (Lead_Quality.size() > 0) {
+			WebElement Lead_Qty = driver.findElement(lead_quality);
+			Lead_Qty.click();
+			Select sel1 = new Select(Lead_Qty);
+			sel1.selectByVisibleText("Cold");
+			tes.log(Status.PASS, "Lead quality field found and value passed in followup.");
+		} else {
+			tes.log(Status.INFO, "Lead quality field is not present in followup.");
+		}
 	    driver.findElement(followup_desc).sendKeys("Followup desc");
 
 	    WebElement dateTimeField = driver.findElement(next_followup_date);
@@ -465,6 +526,8 @@ public class Enquiry {
 
 	    Thread.sleep(2000);
 	    driver.findElement(followup_save).click();
+	    
+	    Thread.sleep(2000);
 	}
 
 	

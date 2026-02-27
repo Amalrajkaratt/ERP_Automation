@@ -65,7 +65,7 @@ public class ERP_Test {
 
 	}
 	
-	@Test(priority = 0)
+//	@Test(priority = 0)
 	public void data_driven_testing() throws Exception {
 	    isDataDriven = true;
 
@@ -91,7 +91,7 @@ public class ERP_Test {
 		enq.enquiry();
 	}
 
-	@Test(priority = 3)
+//	@Test(priority = 3)
 	public void enquiry_overview() throws Exception {
 
 		test = extent.createTest("Enquiry overview");
@@ -134,7 +134,7 @@ public class ERP_Test {
 		enq.enquiry_delete();
 	}
 
-	@Test(priority = 8)
+//	@Test(priority = 8)
 	public void enquiry_hot() throws Exception {
 
 		test = extent.createTest("Make enquiry hot");

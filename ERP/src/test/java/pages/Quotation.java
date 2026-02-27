@@ -5,7 +5,9 @@ import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.DataFlavor;
 import java.time.Duration;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -31,14 +33,17 @@ public class Quotation {
 	
 //	Object repository
 	
+	By create_quotation_btn = By.id("btn-create-quotation");
 	By quotation_valid_upto=By.id("expdate");
+	By next_followup_date = By.id("firstfollowupdate");
+	By lead_qualiy_quotation = By.id("quotation-quality");
 	By quo_no=By.id("quotation-no");
 	By billing_address_dropdown=By.id("billingaddress");
 	By description = By.xpath("//textarea[@rows='3' and contains(@class,'textarea')]");
 	By item_description=By.xpath("(//textarea[contains(@class,'textarea')])[1]");
 	By rate=By.xpath("(//input[contains(@class,'form-control') and contains(@class,'number') and @type='text'])[1]");
 	By subsidy=By.xpath("/html/body/div[1]/div[1]/div[1]/form/div/div[2]/div/div/div[1]/div/div[16]/div/table/tbody/tr/td[4]/input");
-	By quotation_save_btn=By.xpath("//button[.//i[contains(@class,'ri-save-line')]]");
+	By quotation_save_btn=By.id("btn-save-quotation");
 	By quotation_confirm_btn=By.xpath("/html/body/div[21]/div/div[3]/button[1]");
 	
 	By edit_quotation=By.xpath("/html/body/div[1]/div[1]/div[1]/div/div[1]/div[2]/button[2]");
@@ -48,7 +53,7 @@ public class Quotation {
 	By followupBtn = By.xpath("//button[contains(., 'Followup') and .//i[contains(@class,'ri-printer-line')]]");
 	By followupStatus = By.cssSelector("select.form-control.d-flex");
 	By qtn_description = By.id("short-description");
-	By saveBtn = By.xpath("//button[@type='submit' and contains(normalize-space(.), 'Save')]");
+	By saveBtn = By.xpath("//button[normalize-space()='Save']");
 
 		
 	public Quotation(WebDriver driver, ExtentTest test2) {
@@ -59,6 +64,8 @@ public class Quotation {
 //	Methods
 	public void quotation()throws Exception {
         JavascriptExecutor js = (JavascriptExecutor) driver;
+        
+        driver.findElement(create_quotation_btn).click();
 
 		WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.elementToBeClickable(quotation_valid_upto));
@@ -77,6 +84,33 @@ public class Quotation {
 		driver.findElement(quotation_valid_upto).clear();
 		driver.findElement(quotation_valid_upto).sendKeys(formattedDate);		
 //		WebElement Billing_address=driver.findElement(billing_address_dropdown);
+		
+	    WebElement dateTimeField = driver.findElement(next_followup_date);
+
+	 // Read min value
+	 String minValue = dateTimeField.getAttribute("min");
+
+	 // Parse min time
+	 LocalDateTime minTime = LocalDateTime.parse(minValue);
+
+	 // Add 2 minutes
+	 LocalDateTime finalTime = minTime.plusMinutes(2);
+
+	 // Correct formatter
+	 DateTimeFormatter formatter =
+	         DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm");
+
+	 String valueToSet = finalTime.format(formatter);
+
+	 // Set value using JS and trigger events
+	 JavascriptExecutor js1 = (JavascriptExecutor) driver;
+	 js1.executeScript(
+	         "arguments[0].value = arguments[1];" +
+	         "arguments[0].dispatchEvent(new Event('input', { bubbles: true }));" +
+	         "arguments[0].dispatchEvent(new Event('change', { bubbles: true }));",
+	         dateTimeField,
+	         valueToSet
+	 );
 		
 		WebElement Quo_no=driver.findElement(quo_no);
 		Actions act=new Actions(driver);
@@ -100,7 +134,15 @@ public class Quotation {
 			test2.log(Status.FAIL, "The quotation number is not present");
 		}
 		
-	
+	List<WebElement> Lead_Quality = driver.findElements(lead_qualiy_quotation);
+	if(Lead_Quality.size()>0)
+	{
+		Select select = new Select(driver.findElement(lead_qualiy_quotation));
+		select.selectByVisibleText("Cold");
+		test2.log(Status.INFO, "Lead quality selected as hot");
+	} else {
+		test2.log(Status.INFO, "Lead quality field is not present");
+	}
 		
 		Thread.sleep(2000);
 		WebElement Description = driver.findElement(description);
@@ -235,7 +277,16 @@ public class Quotation {
 		description_field.sendKeys("Followup done");
 
 		Thread.sleep(2000);
-		driver.findElement(saveBtn).click();
+		List<WebElement> saveButtons =
+		        driver.findElements(By.xpath("//button[normalize-space()='Save']"));
+
+		for (WebElement btn : saveButtons) {
+		    if (btn.isDisplayed() && btn.isEnabled()) {
+		        btn.click();
+		        System.out.println("Clicked visible Save button");
+		        break;
+		    }
+		}
 
 		test2.log(Status.PASS, "Quotation followup saved successfully");
 	}

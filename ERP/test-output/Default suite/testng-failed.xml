@@ -7,8 +7,8 @@
         <methods>
           <include name="urlloading"/>
           <include name="afterMethod"/>
+          <include name="quotation_followup"/>
           <include name="teardown"/>
-          <include name="data_driven_testing"/>
         </methods>
       </class> <!-- test.ERP_Test -->
     </classes>

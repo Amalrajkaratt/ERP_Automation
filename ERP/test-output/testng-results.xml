@@ -1,39 +1,144 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="11" passed="10" failed="1" skipped="0">
+<testng-results ignored="0" total="8" passed="7" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-12-17T17:15:29 IST" name="Default suite" finished-at="2025-12-17T17:17:11 IST" duration-ms="102144">
+  <suite started-at="2026-02-27T17:48:06 IST" name="Default suite" finished-at="2026-02-27T17:49:14 IST" duration-ms="68124">
     <groups>
     </groups>
-    <test started-at="2025-12-17T17:15:29 IST" name="Default test" finished-at="2025-12-17T17:17:11 IST" duration-ms="102144">
+    <test started-at="2026-02-27T17:48:06 IST" name="Default test" finished-at="2026-02-27T17:49:14 IST" duration-ms="68124">
       <class name="test.ERP_Test">
-        <test-method is-config="true" signature="urlloading()[pri:0, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-17T17:15:29 IST" name="urlloading" finished-at="2025-12-17T17:15:34 IST" duration-ms="5218" status="PASS">
+        <test-method is-config="true" signature="urlloading()[pri:0, instance:test.ERP_Test@6302bbb1]" started-at="2026-02-27T17:48:06 IST" name="urlloading" finished-at="2026-02-27T17:48:09 IST" duration-ms="3778" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- urlloading -->
-        <test-method signature="data_driven_testing()[pri:0, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-17T17:15:34 IST" name="data_driven_testing" finished-at="2025-12-17T17:15:40 IST" duration-ms="5791" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
+        <test-method signature="login_test()[pri:1, instance:test.ERP_Test@6302bbb1]" started-at="2026-02-27T17:48:09 IST" name="login_test" finished-at="2026-02-27T17:48:17 IST" duration-ms="7553" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login_test -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:test.ERP_Test@6302bbb1]" started-at="2026-02-27T17:48:17 IST" name="afterMethod" finished-at="2026-02-27T17:48:17 IST" duration-ms="184" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=login_test status=SUCCESS method=ERP_Test.login_test()[pri:1, instance:test.ERP_Test@6302bbb1] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method signature="enquiry_create()[pri:2, instance:test.ERP_Test@6302bbb1]" started-at="2026-02-27T17:48:17 IST" name="enquiry_create" finished-at="2026-02-27T17:48:36 IST" duration-ms="19100" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- enquiry_create -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:test.ERP_Test@6302bbb1]" started-at="2026-02-27T17:48:36 IST" name="afterMethod" finished-at="2026-02-27T17:48:36 IST" duration-ms="158" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=enquiry_create status=SUCCESS method=ERP_Test.enquiry_create()[pri:2, instance:test.ERP_Test@6302bbb1] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method signature="followup_from_enquiry_overiew()[pri:5, instance:test.ERP_Test@6302bbb1]" started-at="2026-02-27T17:48:36 IST" name="followup_from_enquiry_overiew" finished-at="2026-02-27T17:48:48 IST" duration-ms="11620" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- followup_from_enquiry_overiew -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:test.ERP_Test@6302bbb1]" started-at="2026-02-27T17:48:48 IST" name="afterMethod" finished-at="2026-02-27T17:48:48 IST" duration-ms="152" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=followup_from_enquiry_overiew status=SUCCESS method=ERP_Test.followup_from_enquiry_overiew()[pri:5, instance:test.ERP_Test@6302bbb1] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method signature="followup_details()[pri:6, instance:test.ERP_Test@6302bbb1]" started-at="2026-02-27T17:48:48 IST" name="followup_details" finished-at="2026-02-27T17:48:55 IST" duration-ms="6546" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- followup_details -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:test.ERP_Test@6302bbb1]" started-at="2026-02-27T17:48:55 IST" name="afterMethod" finished-at="2026-02-27T17:48:55 IST" duration-ms="154" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=followup_details status=SUCCESS method=ERP_Test.followup_details()[pri:6, instance:test.ERP_Test@6302bbb1] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method signature="quotation()[pri:9, instance:test.ERP_Test@6302bbb1]" started-at="2026-02-27T17:48:55 IST" name="quotation" finished-at="2026-02-27T17:49:01 IST" duration-ms="6298" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quotation -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:test.ERP_Test@6302bbb1]" started-at="2026-02-27T17:49:01 IST" name="afterMethod" finished-at="2026-02-27T17:49:02 IST" duration-ms="235" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=quotation status=SUCCESS method=ERP_Test.quotation()[pri:9, instance:test.ERP_Test@6302bbb1] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method signature="edit_quotation()[pri:10, instance:test.ERP_Test@6302bbb1]" started-at="2026-02-27T17:49:02 IST" name="edit_quotation" finished-at="2026-02-27T17:49:04 IST" duration-ms="2376" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- edit_quotation -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:test.ERP_Test@6302bbb1]" started-at="2026-02-27T17:49:04 IST" name="afterMethod" finished-at="2026-02-27T17:49:04 IST" duration-ms="160" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=edit_quotation status=SUCCESS method=ERP_Test.edit_quotation()[pri:10, instance:test.ERP_Test@6302bbb1] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method signature="view_quotation()[pri:11, instance:test.ERP_Test@6302bbb1]" started-at="2026-02-27T17:49:04 IST" name="view_quotation" finished-at="2026-02-27T17:49:11 IST" duration-ms="6744" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- view_quotation -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:test.ERP_Test@6302bbb1]" started-at="2026-02-27T17:49:11 IST" name="afterMethod" finished-at="2026-02-27T17:49:11 IST" duration-ms="305" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=view_quotation status=SUCCESS method=ERP_Test.view_quotation()[pri:11, instance:test.ERP_Test@6302bbb1] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method signature="quotation_followup()[pri:12, instance:test.ERP_Test@6302bbb1]" started-at="2026-02-27T17:49:11 IST" name="quotation_followup" finished-at="2026-02-27T17:49:13 IST" duration-ms="2176" status="FAIL">
+          <exception class="org.openqa.selenium.ElementNotInteractableException">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"#companycode"}
-  (Session info: chrome=143.0.7499.41)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+              <![CDATA[element not interactable
+  (Session info: chrome=145.0.7632.117)
 Build info: version: '4.21.0', revision: '79ed462ef4'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [fa65a10a8f3f10f0a853048e09ccfd5d, findElement {value=companycode, using=id}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.41, chrome: {chromedriverVersion: 143.0.7499.146 (c1224fc40c9..., userDataDir: C:\Users\amalr\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64442}, goog:processID: 20332, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64442/devtoo..., se:cdpVersion: 143.0.7499.41, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: fa65a10a8f3f10f0a853048e09ccfd5d]]>
+Command: [aa242476791ee4fb60cb3f50c93eb839, sendKeysToElement {value=[Ljava.lang.CharSequence;@6be7bf6d, id=f.C205F3331312F5AF1626E5D3DB624A64.d.ED0A0C5922E6F5F5696EF001B32D7D4A.e.1159}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.117, chrome: {chromedriverVersion: 145.0.7632.117 (de4e5d6e13b..., userDataDir: C:\Users\amalr\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62054}, goog:processID: 14616, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62054/devtoo..., se:cdpVersion: 145.0.7632.117, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (aa242476791ee4fb60cb3f50c93eb839)] -> id: short-description]
+Session ID: aa242476791ee4fb60cb3f50c93eb839]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#companycode"}
-  (Session info: chrome=143.0.7499.41)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+              <![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=145.0.7632.117)
 Build info: version: '4.21.0', revision: '79ed462ef4'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [fa65a10a8f3f10f0a853048e09ccfd5d, findElement {value=companycode, using=id}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.41, chrome: {chromedriverVersion: 143.0.7499.146 (c1224fc40c9..., userDataDir: C:\Users\amalr\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64442}, goog:processID: 20332, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64442/devtoo..., se:cdpVersion: 143.0.7499.41, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: fa65a10a8f3f10f0a853048e09ccfd5d
+Command: [aa242476791ee4fb60cb3f50c93eb839, sendKeysToElement {value=[Ljava.lang.CharSequence;@6be7bf6d, id=f.C205F3331312F5AF1626E5D3DB624A64.d.ED0A0C5922E6F5F5696EF001B32D7D4A.e.1159}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.117, chrome: {chromedriverVersion: 145.0.7632.117 (de4e5d6e13b..., userDataDir: C:\Users\amalr\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62054}, goog:processID: 14616, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62054/devtoo..., se:cdpVersion: 145.0.7632.117, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (aa242476791ee4fb60cb3f50c93eb839)] -> id: short-description]
+Session ID: aa242476791ee4fb60cb3f50c93eb839
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -46,12 +151,10 @@ at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.ja
 at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
 at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-at pages.Login.data_driven_test(Login.java:68)
-at test.ERP_Test.data_driven_testing(ERP_Test.java:74)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:110)
+at pages.Quotation.quotation_followup(Quotation.java:277)
+at test.ERP_Test.quotation_followup(ERP_Test.java:174)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -82,172 +185,22 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- data_driven_testing -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-17T17:15:40 IST" name="afterMethod" finished-at="2025-12-17T17:15:40 IST" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=data_driven_testing status=FAILURE method=ERP_Test.data_driven_testing()[pri:0, instance:test.ERP_Test@6302bbb1] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method signature="login_test()[pri:1, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-17T17:15:40 IST" name="login_test" finished-at="2025-12-17T17:15:58 IST" duration-ms="17859" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- login_test -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-17T17:15:58 IST" name="afterMethod" finished-at="2025-12-17T17:15:58 IST" duration-ms="189" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=login_test status=SUCCESS method=ERP_Test.login_test()[pri:1, instance:test.ERP_Test@6302bbb1] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method signature="enquiry_create()[pri:2, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-17T17:15:58 IST" name="enquiry_create" finished-at="2025-12-17T17:16:14 IST" duration-ms="15579" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- enquiry_create -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-17T17:16:14 IST" name="afterMethod" finished-at="2025-12-17T17:16:14 IST" duration-ms="238" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=enquiry_create status=SUCCESS method=ERP_Test.enquiry_create()[pri:2, instance:test.ERP_Test@6302bbb1] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method signature="enquiry_overview()[pri:3, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-17T17:16:14 IST" name="enquiry_overview" finished-at="2025-12-17T17:16:23 IST" duration-ms="8532" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- enquiry_overview -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-17T17:16:23 IST" name="afterMethod" finished-at="2025-12-17T17:16:23 IST" duration-ms="176" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=enquiry_overview status=SUCCESS method=ERP_Test.enquiry_overview()[pri:3, instance:test.ERP_Test@6302bbb1] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method signature="followup_from_enquiry_overiew()[pri:5, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-17T17:16:23 IST" name="followup_from_enquiry_overiew" finished-at="2025-12-17T17:16:32 IST" duration-ms="8917" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- followup_from_enquiry_overiew -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-17T17:16:32 IST" name="afterMethod" finished-at="2025-12-17T17:16:32 IST" duration-ms="198" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=followup_from_enquiry_overiew status=SUCCESS method=ERP_Test.followup_from_enquiry_overiew()[pri:5, instance:test.ERP_Test@6302bbb1] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method signature="followup_details()[pri:6, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-17T17:16:32 IST" name="followup_details" finished-at="2025-12-17T17:16:39 IST" duration-ms="7027" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- followup_details -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-17T17:16:39 IST" name="afterMethod" finished-at="2025-12-17T17:16:39 IST" duration-ms="213" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=followup_details status=SUCCESS method=ERP_Test.followup_details()[pri:6, instance:test.ERP_Test@6302bbb1] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method signature="enquiry_hot()[pri:8, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-17T17:16:39 IST" name="enquiry_hot" finished-at="2025-12-17T17:16:50 IST" duration-ms="10894" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- enquiry_hot -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-17T17:16:50 IST" name="afterMethod" finished-at="2025-12-17T17:16:50 IST" duration-ms="164" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=enquiry_hot status=SUCCESS method=ERP_Test.enquiry_hot()[pri:8, instance:test.ERP_Test@6302bbb1] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method signature="quotation()[pri:9, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-17T17:16:50 IST" name="quotation" finished-at="2025-12-17T17:16:56 IST" duration-ms="5409" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- quotation -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-17T17:16:56 IST" name="afterMethod" finished-at="2025-12-17T17:16:56 IST" duration-ms="352" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=quotation status=SUCCESS method=ERP_Test.quotation()[pri:9, instance:test.ERP_Test@6302bbb1] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method signature="edit_quotation()[pri:10, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-17T17:16:56 IST" name="edit_quotation" finished-at="2025-12-17T17:16:58 IST" duration-ms="2473" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- edit_quotation -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-17T17:16:58 IST" name="afterMethod" finished-at="2025-12-17T17:16:59 IST" duration-ms="266" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=edit_quotation status=SUCCESS method=ERP_Test.edit_quotation()[pri:10, instance:test.ERP_Test@6302bbb1] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method signature="view_quotation()[pri:11, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-17T17:16:59 IST" name="view_quotation" finished-at="2025-12-17T17:17:06 IST" duration-ms="6908" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- view_quotation -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-17T17:17:06 IST" name="afterMethod" finished-at="2025-12-17T17:17:06 IST" duration-ms="337" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=view_quotation status=SUCCESS method=ERP_Test.view_quotation()[pri:11, instance:test.ERP_Test@6302bbb1] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method signature="quotation_followup()[pri:12, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-17T17:17:06 IST" name="quotation_followup" finished-at="2025-12-17T17:17:11 IST" duration-ms="4732" status="PASS">
+          </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quotation_followup -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-17T17:17:11 IST" name="afterMethod" finished-at="2025-12-17T17:17:11 IST" duration-ms="204" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:test.ERP_Test@6302bbb1]" started-at="2026-02-27T17:49:13 IST" name="afterMethod" finished-at="2026-02-27T17:49:13 IST" duration-ms="168" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=quotation_followup status=SUCCESS method=ERP_Test.quotation_followup()[pri:12, instance:test.ERP_Test@6302bbb1] output={null}]]]>
+                <![CDATA[[TestResult name=quotation_followup status=FAILURE method=ERP_Test.quotation_followup()[pri:12, instance:test.ERP_Test@6302bbb1] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:test.ERP_Test@6302bbb1]" started-at="2025-12-17T17:17:11 IST" name="teardown" finished-at="2025-12-17T17:17:11 IST" duration-ms="362" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:test.ERP_Test@6302bbb1]" started-at="2026-02-27T17:49:13 IST" name="teardown" finished-at="2026-02-27T17:49:14 IST" duration-ms="347" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
