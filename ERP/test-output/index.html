@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Default_suite" class="navigator-link">
-              <span class="suite-name border-failed">Default suite</span>
+              <span class="suite-name border-passed">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\amalr\AppData\Local\Temp\testng-eclipse--240900613\testng-customsuite.xml</span>
+                    <span>C:\Users\amalr\AppData\Local\Temp\testng-eclipse--1477161315\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,21 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">8 methods, 1 failed,   7 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
-                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
-                    </span>
-                    <div class="method-list-content failed suite-Default_suite">
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="test.ERP_Test" class="method navigator-link" hash-for-method="quotation_followup">quotation_followup</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-Default_suite -->
+                    <span class="method-stats">8 methods,   8 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -147,6 +133,11 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="test.ERP_Test" class="method navigator-link" hash-for-method="quotation_followup">quotation_followup</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Default_suite" title="test.ERP_Test" class="method navigator-link" hash-for-method="view_quotation">view_quotation</a> <!-- method navigator-link -->
                       </span>
                       <br/>
@@ -162,76 +153,6 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_suite" class="panel Default_suite">
-          <div class="suite-Default_suite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">test.ERP_Test</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="quotation_followup">
-                  </a> <!-- quotation_followup -->
-                  <span class="method-name">quotation_followup</span>
-                  <div class="stack-trace">org.openqa.selenium.ElementNotInteractableException: element not interactable
-  (Session info: chrome=145.0.7632.117)
-Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [aa242476791ee4fb60cb3f50c93eb839, sendKeysToElement {value=[Ljava.lang.CharSequence;@6be7bf6d, id=f.C205F3331312F5AF1626E5D3DB624A64.d.ED0A0C5922E6F5F5696EF001B32D7D4A.e.1159}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.117, chrome: {chromedriverVersion: 145.0.7632.117 (de4e5d6e13b..., userDataDir: C:\Users\amalr\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62054}, goog:processID: 14616, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62054/devtoo..., se:cdpVersion: 145.0.7632.117, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (aa242476791ee4fb60cb3f50c93eb839)] -&gt; id: short-description]
-Session ID: aa242476791ee4fb60cb3f50c93eb839
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:110)
-	at pages.Quotation.quotation_followup(Quotation.java:277)
-	at test.ERP_Test.quotation_followup(ERP_Test.java:174)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:829)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-	at org.testng.TestNG.runSuites(TestNG.java:1099)
-	at org.testng.TestNG.run(TestNG.java:1067)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_suite-class-failed -->
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -282,6 +203,13 @@ Session ID: aa242476791ee4fb60cb3f50c93eb839
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
+                  <a name="quotation_followup">
+                  </a> <!-- quotation_followup -->
+                  <span class="method-name">quotation_followup</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
                   <a name="view_quotation">
                   </a> <!-- view_quotation -->
                   <span class="method-name">view_quotation</span>
@@ -292,7 +220,7 @@ Session ID: aa242476791ee4fb60cb3f50c93eb839
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\amalr\AppData\Local\Temp\testng-eclipse--240900613\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\amalr\AppData\Local\Temp\testng-eclipse--1477161315\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -345,35 +273,35 @@ data.addRows(8);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'enquiry_create')
 data.setCell(0, 2, 'test.ERP_Test')
-data.setCell(0, 3, 19100);
+data.setCell(0, 3, 23132);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'followup_from_enquiry_overiew')
 data.setCell(1, 2, 'test.ERP_Test')
-data.setCell(1, 3, 11620);
+data.setCell(1, 3, 12615);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'login_test')
 data.setCell(2, 2, 'test.ERP_Test')
-data.setCell(2, 3, 7553);
+data.setCell(2, 3, 9887);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'view_quotation')
+data.setCell(3, 1, 'quotation')
 data.setCell(3, 2, 'test.ERP_Test')
-data.setCell(3, 3, 6744);
+data.setCell(3, 3, 9198);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'followup_details')
 data.setCell(4, 2, 'test.ERP_Test')
-data.setCell(4, 3, 6546);
+data.setCell(4, 3, 7495);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'quotation')
+data.setCell(5, 1, 'quotation_followup')
 data.setCell(5, 2, 'test.ERP_Test')
-data.setCell(5, 3, 6298);
+data.setCell(5, 3, 4910);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'edit_quotation')
+data.setCell(6, 1, 'view_quotation')
 data.setCell(6, 2, 'test.ERP_Test')
-data.setCell(6, 3, 2376);
+data.setCell(6, 3, 4592);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'quotation_followup')
+data.setCell(7, 1, 'edit_quotation')
 data.setCell(7, 2, 'test.ERP_Test')
-data.setCell(7, 3, 2176);
+data.setCell(7, 3, 3514);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
@@ -411,73 +339,71 @@ return data;
               </div> <!-- configuration-test before -->
               <div class="test-method">
                 <span class="method-name">login_test</span>
-                <span class="method-start">3812 ms</span>
+                <span class="method-start">6013 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod([TestResult name=login_test status=SUCCESS method=ERP_Test.login_test()[pri:1, instance:test.ERP_Tes...)</span>
-                <span class="method-start">11368 ms</span>
+                <span class="method-start">15910 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">enquiry_create</span>
-                <span class="method-start">11555 ms</span>
+                <span class="method-start">16212 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod([TestResult name=enquiry_create status=SUCCESS method=ERP_Test.enquiry_create()[pri:2, instance:test...)</span>
-                <span class="method-start">30657 ms</span>
+                <span class="method-start">39349 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">followup_from_enquiry_overiew</span>
-                <span class="method-start">30816 ms</span>
+                <span class="method-start">39667 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod([TestResult name=followup_from_enquiry_overiew status=SUCCESS method=ERP_Test.followup_from_enquiry_...)</span>
-                <span class="method-start">42439 ms</span>
+                <span class="method-start">52286 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">followup_details</span>
-                <span class="method-start">42592 ms</span>
+                <span class="method-start">52525 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod([TestResult name=followup_details status=SUCCESS method=ERP_Test.followup_details()[pri:6, instance:...)</span>
-                <span class="method-start">49140 ms</span>
+                <span class="method-start">60023 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">quotation</span>
-                <span class="method-start">49296 ms</span>
+                <span class="method-start">60291 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod([TestResult name=quotation status=SUCCESS method=ERP_Test.quotation()[pri:9, instance:test.ERP_Test@...)</span>
-                <span class="method-start">55595 ms</span>
+                <span class="method-start">69491 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">edit_quotation</span>
-                <span class="method-start">55832 ms</span>
+                <span class="method-start">69715 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod([TestResult name=edit_quotation status=SUCCESS method=ERP_Test.edit_quotation()[pri:10, instance:tes...)</span>
-                <span class="method-start">58210 ms</span>
+                <span class="method-start">73231 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">view_quotation</span>
-                <span class="method-start">58370 ms</span>
+                <span class="method-start">73773 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod([TestResult name=view_quotation status=SUCCESS method=ERP_Test.view_quotation()[pri:11, instance:tes...)</span>
-                <span class="method-start">65115 ms</span>
+                <span class="method-start">78374 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">quotation_followup</span>
-                <span class="method-start">65422 ms</span>
+                <span class="method-start">78873 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=quotation_followup status=FAILURE method=ERP_Test.quotation_followup()[pri:12, inst...)</span>
-                <span class="method-start">67602 ms</span>
+                <span class="method-name">afterMethod([TestResult name=quotation_followup status=SUCCESS method=ERP_Test.quotation_followup()[pri:12, inst...)</span>
+                <span class="method-start">83789 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-test after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">67771 ms</span>
+                <span class="method-start">84065 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -41,10 +41,8 @@ public class Quotation {
 	By billing_address_dropdown=By.id("billingaddress");
 	By description = By.xpath("//textarea[@rows='3' and contains(@class,'textarea')]");
 	By item_description=By.xpath("(//textarea[contains(@class,'textarea')])[1]");
-	By rate=By.xpath("(//input[contains(@class,'form-control') and contains(@class,'number') and @type='text'])[1]");
-	By subsidy=By.xpath("/html/body/div[1]/div[1]/div[1]/form/div/div[2]/div/div/div[1]/div/div[16]/div/table/tbody/tr/td[4]/input");
+	By rate = By.xpath("(//*[contains(@id,'item-rate')])[1]");
 	By quotation_save_btn=By.id("btn-save-quotation");
-	By quotation_confirm_btn=By.xpath("/html/body/div[21]/div/div[3]/button[1]");
 	
 	By edit_quotation=By.xpath("/html/body/div[1]/div[1]/div[1]/div/div[1]/div[2]/button[2]");
     
@@ -52,8 +50,8 @@ public class Quotation {
 
 	By followupBtn = By.xpath("//button[contains(., 'Followup') and .//i[contains(@class,'ri-printer-line')]]");
 	By followupStatus = By.cssSelector("select.form-control.d-flex");
-	By qtn_description = By.id("short-description");
-	By saveBtn = By.xpath("//button[normalize-space()='Save']");
+	By qtn_description = By.id("followup-description");
+	By saveBtn = By.id("btn-save-followup");
 
 		
 	public Quotation(WebDriver driver, ExtentTest test2) {
@@ -266,13 +264,19 @@ public class Quotation {
 		WebElement dropdown = driver.findElement(followupStatus);
 		Select select = new Select(dropdown);
 
-		for (WebElement option : select.getOptions()) {
-		    if (option.getText().contains("Won")) {
-		        option.click();
-		        break;
-		    }
-		}
+//		for (WebElement option : select.getOptions()) {
+//		    if (option.getText().contains("Customer")) {
+//		        option.click();
+//		        break;
+//		    }
+//		}
 
+		WebElement firstGreenOption = driver.findElement(
+			    By.xpath("(//option[contains(@style,'green')])[1]")
+			);
+
+			firstGreenOption.click();  //Clicking the first Won option from the lead status dropdown
+			
 		WebElement description_field = driver.findElement(qtn_description);
 		description_field.sendKeys("Followup done");
 
