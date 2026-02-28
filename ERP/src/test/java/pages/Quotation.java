@@ -61,7 +61,6 @@ public class Quotation {
 	}
 //	Methods
 	public void quotation()throws Exception {
-        JavascriptExecutor js = (JavascriptExecutor) driver;
         
         driver.findElement(create_quotation_btn).click();
 
@@ -190,11 +189,12 @@ public class Quotation {
 		driver.findElement(rate).clear();
 		driver.findElement(rate).sendKeys("10000");
 		
-		
-		js.executeScript("arguments[0].scrollIntoView();", driver.findElement(quotation_save_btn));
-		Actions act1=new Actions(driver);
-		act1.moveToElement(driver.findElement(quotation_save_btn)).click().perform();
-		
+
+		WebElement saveBtn = wait.until(ExpectedConditions.elementToBeClickable(quotation_save_btn));
+
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block:'center'});", saveBtn);
+
+		act.moveToElement(saveBtn).click().perform();		
 		
 		test2.log(Status.PASS, "Quotation created successfully");
 		

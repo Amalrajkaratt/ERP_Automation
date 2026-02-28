@@ -10,6 +10,7 @@
           <include name="edit_quotation"/>
           <include name="quotation_followup"/>
           <include name="view_quotation"/>
+          <include name="quotation"/>
           <include name="teardown"/>
         </methods>
       </class> <!-- test.ERP_Test -->
